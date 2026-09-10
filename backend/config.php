@@ -51,6 +51,7 @@ function set_cors_headers() {
             $parsed_host === 'localhost' ||
             $parsed_host === '127.0.0.1' ||
             ($parsed_host && preg_match('/\.pages\.dev$/i', $parsed_host)) ||
+            ($parsed_host && preg_match('/(^|\.)hostingersite\.com$/i', $parsed_host)) ||
             ($parsed_host && preg_match('/(^|\.)urdhvascens\.com$/i', $parsed_host))
         );
 

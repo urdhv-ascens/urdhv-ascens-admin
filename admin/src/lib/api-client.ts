@@ -8,9 +8,13 @@ import type { Booklet, Course, ReaderRecord, AdsConfig, ContentRecord } from '@/
 
 export const API_BASE = 
   process.env.NEXT_PUBLIC_API_URL || 
-  (typeof window !== 'undefined' && window.location.origin.includes('localhost') 
-    ? 'http://localhost/urdhvascens/api' 
-    : 'https://urdhvascens.com/api');
+  (typeof window !== 'undefined' 
+    ? (window.location.origin.includes('localhost') 
+        ? 'http://localhost/urdhvascens/api' 
+        : (window.location.origin.includes('hostingersite.com')
+            ? `${window.location.origin}/api`
+            : 'https://gold-cat-133405.hostingersite.com/api'))
+    : 'https://gold-cat-133405.hostingersite.com/api');
 
 function getAuthHeaders(): HeadersInit {
   const headers: Record<string, string> = {

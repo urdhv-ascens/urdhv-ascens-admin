@@ -51,7 +51,7 @@ export default function AdsAdminPage() {
       id: `slide-${Date.now()}`,
       title: 'New Sponsor Headline',
       subtitle: 'Optional sponsor description',
-      destinationUrl: 'https://urdhvascens.com',
+      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
       active: true,
       displayOrder: ads.topBar.slides.length + 1
     };
@@ -92,7 +92,7 @@ export default function AdsAdminPage() {
       id: `side-slide-${Date.now()}`,
       title: 'New Side Banner Slide',
       imageUrl: '/uploads/ad_side_1.png',
-      destinationUrl: 'https://urdhvascens.com',
+      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
       alt: 'Side sponsor creative',
       active: true,
       displayOrder: (ads.sideAds.slides?.length || 0) + 1
@@ -134,7 +134,7 @@ export default function AdsAdminPage() {
       id: `mob-slide-${Date.now()}`,
       title: 'New Mobile Banner Slide',
       imageUrl: '/uploads/ad_mobile_1.png',
-      destinationUrl: 'https://urdhvascens.com',
+      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
       alt: 'Mobile sponsor creative',
       active: true,
       displayOrder: (ads.mobileBanner?.slides?.length || 0) + 1
