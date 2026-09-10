@@ -16,7 +16,9 @@ define('COURSES_FILE', DATA_DIR . '/courses.json');
 define('READERS_FILE', DATA_DIR . '/readers.json');
 define('ADS_FILE', DATA_DIR . '/ads.json');
 define('UPLOAD_DIR', dirname(__DIR__) . '/uploads');
-define('UPLOAD_URL_PREFIX', '/uploads/');
+$is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+$upload_host = $_SERVER['HTTP_HOST'] ?? 'gold-cat-133405.hostingersite.com';
+define('UPLOAD_URL_PREFIX', ($is_https ? 'https://' : 'http://') . $upload_host . '/uploads/');
 
 // 3. Admin Security Configuration
 // Change this to your preferred admin secret password in production
@@ -60,8 +62,8 @@ function set_cors_headers() {
             header('Access-Control-Allow-Credentials: true');
         }
     }
-    header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key');
+    header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS, PUT');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key, X-Admin-Token');
 }
 
 /**
@@ -125,26 +127,69 @@ function handle_cors() {
 }
 
 /**
+ * Extracts Authorization header from various server environments.
+ */
+function get_auth_header() {
+    if (!empty($_SERVER['HTTP_AUTHORIZATION'])) {
+        return trim($_SERVER['HTTP_AUTHORIZATION']);
+    }
+    if (!empty($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+        return trim($_SERVER['REDIRECT_HTTP_AUTHORIZATION']);
+    }
+    if (function_exists('apache_request_headers')) {
+        $headers = apache_request_headers();
+        if (!empty($headers['Authorization'])) return trim($headers['Authorization']);
+        if (!empty($headers['authorization'])) return trim($headers['authorization']);
+    }
+    if (function_exists('getallheaders')) {
+        $headers = getallheaders();
+        if (!empty($headers['Authorization'])) return trim($headers['Authorization']);
+        if (!empty($headers['authorization'])) return trim($headers['authorization']);
+    }
+    return '';
+}
+
+/**
  * Validates whether the incoming request is authenticated as an admin.
  * Uses timing-safe string comparison (hash_equals).
  */
 function verify_admin($body = []) {
-    // Check X-Admin-Key header
+    // 1. Check X-Admin-Key header
     $header_key = isset($_SERVER['HTTP_X_ADMIN_KEY']) ? trim($_SERVER['HTTP_X_ADMIN_KEY']) : '';
+    if (!$header_key && function_exists('getallheaders')) {
+        $headers = getallheaders();
+        $header_key = $headers['X-Admin-Key'] ?? $headers['x-admin-key'] ?? '';
+    }
     if ($header_key && hash_equals(ADMIN_SECRET_KEY, $header_key)) {
         return true;
     }
 
-    // Check Authorization Bearer token
-    $auth_header = isset($_SERVER['HTTP_AUTHORIZATION']) ? trim($_SERVER['HTTP_AUTHORIZATION']) : '';
-    if ($auth_header && preg_match('/Bearer\s+(.*)$/i', $auth_header, $matches)) {
-        $token = trim($matches[1]);
-        if (hash_equals(ADMIN_SECRET_KEY, $token) || verify_session_token($token)) {
-            return true;
-        }
+    // 2. Check X-Admin-Token header
+    $admin_token_header = isset($_SERVER['HTTP_X_ADMIN_TOKEN']) ? trim($_SERVER['HTTP_X_ADMIN_TOKEN']) : '';
+    if (!$admin_token_header && function_exists('getallheaders')) {
+        $headers = getallheaders();
+        $admin_token_header = $headers['X-Admin-Token'] ?? $headers['x-admin-token'] ?? '';
+    }
+    if ($admin_token_header && (hash_equals(ADMIN_SECRET_KEY, $admin_token_header) || verify_session_token($admin_token_header))) {
+        return true;
     }
 
-    // Check key in parsed request body
+    // 3. Check Authorization Bearer token
+    $auth_header = get_auth_header();
+    $token = '';
+    if ($auth_header && preg_match('/Bearer\s+(.*)$/i', $auth_header, $matches)) {
+        $token = trim($matches[1]);
+    } else if (!empty($_GET['token'])) {
+        $token = trim($_GET['token']);
+    } else if (!empty($body['token'])) {
+        $token = trim($body['token']);
+    }
+
+    if ($token && (hash_equals(ADMIN_SECRET_KEY, $token) || verify_session_token($token))) {
+        return true;
+    }
+
+    // 4. Check key in parsed request body
     if (isset($body['adminKey']) && is_string($body['adminKey']) && hash_equals(ADMIN_SECRET_KEY, trim($body['adminKey']))) {
         return true;
     }
