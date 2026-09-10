@@ -9,21 +9,32 @@ require_once __DIR__ . '/config.php';
 
 handle_cors();
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $_SERVER['REQUEST_METHOD'] !== 'GET') {
     send_json(['error' => 'Method not allowed'], 405);
 }
 
 $raw = file_get_contents('php://input');
 $body = json_decode($raw, true) ?: $_POST;
 
-$action   = isset($body['action']) ? trim($body['action']) : (isset($_GET['action']) ? trim($_GET['action']) : 'login');
+$action   = isset($_GET['action']) ? trim($_GET['action']) : (isset($body['action']) ? trim($body['action']) : 'login');
 $token    = isset($body['token']) ? trim($body['token']) : '';
 $password = isset($body['password']) ? trim($body['password']) : '';
 $adminKey = isset($body['adminKey']) ? trim($body['adminKey']) : '';
 $email    = isset($body['email']) ? filter_var(trim($body['email']), FILTER_SANITIZE_EMAIL) : 'admin@urdhvascens.com';
 
 // -----------------------------------------------------------------------------
-// 1. Session Invalidation / Logout Action
+// 1. Session Verification Action (GET or POST /api/auth.php?action=verify)
+// -----------------------------------------------------------------------------
+if ($action === 'verify') {
+    $isValid = verify_admin($body);
+    send_json([
+        'authenticated' => $isValid,
+        'role' => $isValid ? 'admin' : null
+    ]);
+}
+
+// -----------------------------------------------------------------------------
+// 2. Session Invalidation / Logout Action
 // -----------------------------------------------------------------------------
 if ($action === 'logout') {
     // Look for token in payload or Bearer header
