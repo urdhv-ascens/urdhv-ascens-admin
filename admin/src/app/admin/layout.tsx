@@ -27,7 +27,8 @@ export default function AdminLayout({
   const pathname = usePathname();
   const router = useRouter();
 
-  if (pathname === '/admin/login') {
+  const normalizedPath = pathname ? pathname.replace(/\/+$/, '') : '';
+  if (normalizedPath === '/admin/login') {
     return <AdminAuthGuard>{children}</AdminAuthGuard>;
   }
 
@@ -56,7 +57,7 @@ export default function AdminLayout({
         <aside className="w-64 border-r border-zinc-800 bg-zinc-950 flex flex-col shrink-0 hidden md:flex">
           <div className="p-5 border-b border-zinc-800 flex items-center justify-between">
             <Link href="/admin" className="flex items-center gap-2.5">
-              <img src="/logo.png" alt="Ūrdhv Ascens" className="h-6 w-auto object-contain" />
+              <img src="/logo.webp" alt="Ūrdhv Ascens" className="h-6 w-auto object-contain" />
               <span className="text-base font-black tracking-wider text-white uppercase">
                 ŪRDHV <span className="text-emerald-400">CONTROL</span>
               </span>
@@ -96,7 +97,7 @@ export default function AdminLayout({
           
           <div className="p-4 border-t border-zinc-800 flex flex-col gap-2">
             <a
-              href="https://gold-cat-133405.hostingersite.com"
+              href="https://urdhvascens.pages.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between px-3 py-2 text-xs font-medium text-zinc-400 hover:text-white hover:bg-zinc-900 rounded-lg transition-colors"

@@ -2,14 +2,14 @@
   "siteSettings": {
     "companyName": "Ūrdhv Ascens",
     "tagline": "A Digital Aesthetics & Functionality Hub",
-    "logoUrl": "/logo.png",
+    "logoUrl": "/logo.webp",
     "viewerUrl": "https://urdhv-viewer.pages.dev"
   },
   "hero": {
     "tagline": "DIGITAL CRAFT / UNCOMPROMISING PRECISION",
     "title": "We help you to Ascend.",
     "description": "Ūrdhv Ascens delivers enterprise-grade design, digital presence management, and technical solutions for brands that demand distinction.",
-    "backgroundImage": "/assets/images/favicon.png",
+    "backgroundImage": "/assets/images/favicon.webp",
     "backgroundBlur": 32,
     "backgroundOpacity": 20,
     "primaryCtaText": "Access AI Courses (Free)",
@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "About Us",
-    "imageUrl": "/assets/images/about-graphic.png",
+    "imageUrl": "/assets/images/About-Us.webp",
     "description": "At Ūrdhv Ascens, we don't just build websites or design logos - we architect digital legacies. We believe that aesthetics without robust functionality is merely decoration, and robust functionality without aesthetics is a missed connection. Our philosophy bridges this gap, delivering digital experiences that are as performant as they are beautiful.",
     "stats": [
       {
@@ -281,60 +281,84 @@
       "id": "1",
       "slug": "star-excellent-academy",
       "name": "Star Excellent Academy",
-      "category": "Web Architecture & CMS",
+      "category": "Web Architecture & Brand Solutions",
       "status": "ACTIVE",
       "displayOrder": 1,
-      "shortDescription": "An enterprise-grade educational digital flagship featuring dynamic API hydration, bespoke administrative CMS, and sub-second edge delivery.",
-      "description": "A comprehensive digital platform for an educational institution - featuring dynamic content management, responsive design, and an admin CMS built on our API-hydration architecture.",
-      "tech": [
-        "Next.js 16",
-        "Tailwind CSS",
-        "Hostinger PHP API",
-        "Cloudflare Edge"
-      ],
       "client": "Star Excellent Trust",
       "year": "2026",
-      "url": "https://urdhvascens.pages.dev",
-      "lastUpdated": "2026-08-18"
+      "url": "https://starexcellent.in/",
+      "imageUrl": "",
+      "tech": [
+        "Web Architecture",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "Next.js"
+      ],
+      "shortDescription": "Enterprise educational flagship web platform, institutional PDF publications & graphic designs, and strategic social media management.",
+      "description": "A comprehensive digital flagship and brand architecture for Star Excellent Academy — featuring responsive web development, custom PDF curriculum publications & promotional graphic designs, and full-funnel social media presence management.",
+      "lastUpdated": "2026-09-10"
     },
     {
       "id": "2",
-      "slug": "aura-luxe-atelier",
-      "name": "Aura Luxe Atelier",
-      "category": "Brand Identity & E-Commerce",
+      "slug": "omkara-store",
+      "name": "Omkara Store",
+      "category": "E-Commerce & Digital Flagship",
       "status": "ACTIVE",
       "displayOrder": 2,
-      "shortDescription": "A luxury digital storefront featuring bespoke typography, minimalist motion aesthetics, and high-conversion editorial checkout flows.",
-      "description": "A luxury digital storefront featuring bespoke typography, minimalist motion aesthetics, and high-conversion editorial checkout flows.",
-      "tech": [
-        "React 19",
-        "Tailwind CSS",
-        "Shopify API",
-        "WebGL"
-      ],
-      "client": "Aura Luxe Global",
+      "client": "Omkara Enterprises",
       "year": "2026",
-      "url": "https://urdhvascens.pages.dev",
-      "lastUpdated": "2026-09-01"
+      "url": "https://omkara-store.pages.dev/",
+      "imageUrl": "",
+      "tech": [
+        "E-Commerce",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "Cloudflare Pages"
+      ],
+      "shortDescription": "High-conversion modern e-commerce storefront, product catalog PDF & promotional graphic design suites, and social media campaign management.",
+      "description": "An elevated e-commerce storefront for Omkara Store — built with edge delivery, bespoke digital product brochures & promotional graphic designs, and targeted social media marketing & brand community management.",
+      "lastUpdated": "2026-09-10"
     },
     {
       "id": "3",
-      "slug": "vedic-superpowers-publishing",
-      "name": "Vedic Superpowers Interactive Publishing",
-      "category": "AI & Interactive Publishing",
+      "slug": "enhance-doorstep",
+      "name": "Enhance Doorstep",
+      "category": "Doorstep Services & Web Flagship",
       "status": "ACTIVE",
       "displayOrder": 3,
-      "shortDescription": "A decoupled 12-booklet digital reading network powered by custom HTML5 Canvas rendering, bounded memory management, and zero-proxy CDN architecture.",
-      "description": "A decoupled 12-booklet digital reading network powered by custom HTML5 Canvas rendering, bounded memory management, and zero-proxy CDN architecture.",
+      "client": "Enhance Doorstep",
+      "year": "2026",
+      "url": "https://enhance-doorstep.github.io/Enhance-Doorstep/",
+      "imageUrl": "",
       "tech": [
-        "Cloudflare Pages",
+        "Web Architecture",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "GitHub Pages"
+      ],
+      "shortDescription": "Modern doorstep service flagship website, service rate cards & marketing PDF graphic designs, and active social media management.",
+      "description": "A dedicated service flagship and digital operations platform for Enhance Doorstep — featuring streamlined customer inquiries, branded PDF service guides & promotional graphic designs, and multi-channel social media management.",
+      "lastUpdated": "2026-09-10"
+    },
+    {
+      "id": "4",
+      "slug": "urdhv-ai-courses",
+      "name": "Ūrdhv Ascens AI Courses & Curriculum Reader",
+      "category": "AI Education & Interactive Publishing",
+      "status": "ACTIVE",
+      "displayOrder": 4,
+      "client": "Ūrdhv Ascens Educational Network",
+      "year": "2026",
+      "url": "https://urdhv-viewer.pages.dev/",
+      "imageUrl": "",
+      "tech": [
+        "AI Courses",
         "HTML5 Canvas",
         "WebP Streaming",
         "TypeScript"
       ],
-      "client": "Ūrdhv Ascens Educational Series",
-      "year": "2026",
-      "url": "https://urdhv-viewer.pages.dev",
+      "shortDescription": "Decoupled 12-booklet AI curriculum network powered by custom HTML5 Canvas rendering, bounded memory management, and zero-proxy CDN architecture.",
+      "description": "Our flagship open-access educational ecosystem featuring free AI learning courses, high-performance HTML5 Canvas reader engine, and interactive WebP booklet distribution.",
       "lastUpdated": "2026-09-10"
     }
   ],
@@ -357,7 +381,7 @@
   },
   "navigation": {
     "brandTitle": "ŪRDHV ASCENS",
-    "logoUrl": "/logo.png",
+    "logoUrl": "/logo.webp",
     "links": [
       {
         "label": "Capabilities",

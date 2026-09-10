@@ -51,7 +51,7 @@ export default function AdsAdminPage() {
       id: `slide-${Date.now()}`,
       title: 'New Sponsor Headline',
       subtitle: 'Optional sponsor description',
-      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
+      destinationUrl: 'https://urdhvascens.pages.dev',
       active: true,
       displayOrder: ads.topBar.slides.length + 1
     };
@@ -91,8 +91,8 @@ export default function AdsAdminPage() {
     const newSlide = {
       id: `side-slide-${Date.now()}`,
       title: 'New Side Banner Slide',
-      imageUrl: '/uploads/ad_side_1.png',
-      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
+      imageUrl: '/uploads/ad_side_1.webp',
+      destinationUrl: 'https://urdhvascens.pages.dev',
       alt: 'Side sponsor creative',
       active: true,
       displayOrder: (ads.sideAds.slides?.length || 0) + 1
@@ -133,8 +133,8 @@ export default function AdsAdminPage() {
     const newSlide = {
       id: `mob-slide-${Date.now()}`,
       title: 'New Mobile Banner Slide',
-      imageUrl: '/uploads/ad_mobile_1.png',
-      destinationUrl: 'https://gold-cat-133405.hostingersite.com',
+      imageUrl: '/uploads/ad_mobile_1.webp',
+      destinationUrl: 'https://urdhvascens.pages.dev',
       alt: 'Mobile sponsor creative',
       active: true,
       displayOrder: (ads.mobileBanner?.slides?.length || 0) + 1
@@ -430,7 +430,7 @@ export default function AdsAdminPage() {
                       value={slide.imageUrl || ''}
                       onChange={e => handleUpdateSideAdSlide(slide.id, 'imageUrl', e.target.value)}
                       className="w-full px-3 py-1.5 bg-zinc-950 border border-zinc-800 rounded-lg text-xs text-white font-mono"
-                      placeholder="/uploads/ad_side_1.png"
+                      placeholder="/uploads/ad_side_1.webp"
                     />
                   </div>
                   <div className="space-y-1">
@@ -481,7 +481,7 @@ export default function AdsAdminPage() {
                     sideAds: { ...ads.sideAds, leftAd: { ...ads.sideAds.leftAd, imageUrl: e.target.value } }
                   })}
                   className="w-full px-3 py-1.5 bg-zinc-950 border border-zinc-850 rounded-lg text-xs text-white font-mono"
-                  placeholder="/uploads/ad_side_1.png"
+                  placeholder="/uploads/ad_side_1.webp"
                 />
               </div>
 
@@ -526,7 +526,7 @@ export default function AdsAdminPage() {
                     sideAds: { ...ads.sideAds, rightAd: { ...ads.sideAds.rightAd, imageUrl: e.target.value } }
                   })}
                   className="w-full px-3 py-1.5 bg-zinc-950 border border-zinc-850 rounded-lg text-xs text-white font-mono"
-                  placeholder="/uploads/ad_side_2.png"
+                  placeholder="/uploads/ad_side_2.webp"
                 />
               </div>
 
@@ -646,7 +646,7 @@ export default function AdsAdminPage() {
                       value={slide.imageUrl || ''}
                       onChange={e => handleUpdateMobileBannerSlide(slide.id, 'imageUrl', e.target.value)}
                       className="w-full px-3 py-1.5 bg-zinc-950 border border-zinc-800 rounded-lg text-xs text-white font-mono"
-                      placeholder="/uploads/ad_mobile_1.png"
+                      placeholder="/uploads/ad_mobile_1.webp"
                     />
                   </div>
                   <div className="space-y-1">

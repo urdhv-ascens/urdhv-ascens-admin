@@ -8,7 +8,7 @@
         "title": "ŪRDHV ASCENS STUDIO — Bespoke Digital Solutions & Brand Identity",
         "subtitle": "Accepting limited high-impact projects for 2026",
         "imageUrl": "",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com#contact",
+        "destinationUrl": "https://urdhvascens.pages.dev#contact",
         "active": true,
         "displayOrder": 1
       },
@@ -17,7 +17,7 @@
         "title": "INSTITUTIONAL AI CURRICULUM — Custom Workshops & Campus Licenses",
         "subtitle": "Empower your faculty and students with ethical AI literacy",
         "imageUrl": "",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com#contact",
+        "destinationUrl": "https://urdhvascens.pages.dev#contact",
         "active": true,
         "displayOrder": 2
       }
@@ -30,8 +30,8 @@
       {
         "id": "side-ad-01",
         "title": "Enterprise Digital Architecture",
-        "imageUrl": "/uploads/ad_side_1.png",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com#contact",
+        "imageUrl": "/uploads/ad_side_1.webp",
+        "destinationUrl": "https://urdhvascens.pages.dev#contact",
         "alt": "Ūrdhv Ascens Studio Engineering",
         "active": true,
         "displayOrder": 1
@@ -39,8 +39,8 @@
       {
         "id": "side-ad-02",
         "title": "Visual AI Curriculum",
-        "imageUrl": "/uploads/ad_side_2.png",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com",
+        "imageUrl": "/uploads/ad_side_2.webp",
+        "destinationUrl": "https://urdhvascens.pages.dev",
         "alt": "Visual AI Curriculum Modules",
         "active": true,
         "displayOrder": 2
@@ -48,14 +48,14 @@
     ],
     "leftAd": {
       "enabled": true,
-      "imageUrl": "/uploads/ad_side_1.png",
-      "destinationUrl": "https://gold-cat-133405.hostingersite.com#contact",
+      "imageUrl": "/uploads/ad_side_1.webp",
+      "destinationUrl": "https://urdhvascens.pages.dev#contact",
       "alt": "Ūrdhv Ascens Studio Partner"
     },
     "rightAd": {
       "enabled": true,
-      "imageUrl": "/uploads/ad_side_2.png",
-      "destinationUrl": "https://gold-cat-133405.hostingersite.com",
+      "imageUrl": "/uploads/ad_side_2.webp",
+      "destinationUrl": "https://urdhvascens.pages.dev",
       "alt": "Ūrdhv Ascens Studio Partner"
     }
   },
@@ -66,8 +66,8 @@
       {
         "id": "mob-ad-01",
         "title": "Ūrdhv Ascens Studio Flagship",
-        "imageUrl": "/uploads/ad_mobile_1.png",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com#contact",
+        "imageUrl": "/uploads/ad_mobile_1.webp",
+        "destinationUrl": "https://urdhvascens.pages.dev#contact",
         "alt": "Ūrdhv Ascens Studio",
         "active": true,
         "displayOrder": 1
@@ -75,8 +75,8 @@
       {
         "id": "mob-ad-02",
         "title": "Educational AI Revolution",
-        "imageUrl": "/uploads/ad_mobile_2.png",
-        "destinationUrl": "https://gold-cat-133405.hostingersite.com",
+        "imageUrl": "/uploads/ad_mobile_2.webp",
+        "destinationUrl": "https://urdhvascens.pages.dev",
         "alt": "Visual AI Educational Track",
         "active": true,
         "displayOrder": 2
