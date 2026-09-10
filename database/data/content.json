@@ -1,0 +1,122 @@
+{
+  "capabilities": {
+    "tagline": "What We Do",
+    "title": "Capabilities",
+    "list": [
+      {
+        "description": "Interfaces that command attention. Every layout, every interaction — meticulously crafted to convert and captivate.",
+        "title": "Web Design",
+        "icon": "Monitor"
+      },
+      {
+        "title": "Graphic Design",
+        "description": "Visual identities that transcend the ordinary. From brand systems to marketing collateral — designed to distinguish.",
+        "icon": "PenTool"
+      },
+      {
+        "icon": "Video",
+        "title": "Video Editing",
+        "description": "Motion that moves. Cinematic post-production with the precision of a studio and the agility of a boutique."
+      },
+      {
+        "title": "Social Media",
+        "description": "Strategic presence management. Content calendars, audience cultivation, and analytics-driven growth — handled entirely.",
+        "icon": "Smartphone"
+      }
+    ],
+    "description": "One nexus for every digital solution — engineered with intent."
+  },
+  "about": {
+    "stats": [
+      {
+        "label": "Enterprise Projects",
+        "value": "24+"
+      },
+      {
+        "label": "Client Retention",
+        "value": "100%"
+      },
+      {
+        "label": "Core Disciplines",
+        "value": "4"
+      }
+    ],
+    "description": "At Ūrdhv Ascens, we don't just build websites or design logos — we architect digital legacies. We believe that aesthetics without robust functionality is merely decoration, and robust functionality without aesthetics is a missed connection. Our philosophy bridges this gap, delivering digital experiences that are as performant as they are beautiful.",
+    "title": "About Us",
+    "video": {
+      "enabled": true,
+      "videoId": "dQw4w9WgXcQ",
+      "title": "Ūrdhv Ascens Showreel",
+      "posterUrl": ""
+    }
+  },
+  "hero": {
+    "tagline": "ACCEPTING LIMITED PROJECTS",
+    "title": "DESIGNED TO DISTINGUISH",
+    "subtitle": "Bespoke Digital Solutions.",
+    "description": "We craft bespoke digital experiences for brands that refuse to blend in. Precision engineered. Distinctly elevated."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A curated selection of work that speaks for itself.",
+    "tagline": "Selected Work"
+  },
+  "siteSettings": {
+    "companyName": "Ūrdhv Ascens"
+  },
+  "services": {
+    "list": [
+      {
+        "description": "Custom-built websites that function as digital flagships. Responsive, performant, and unmistakably yours — from concept to deployment.",
+        "title": "Website Design & Development"
+      },
+      {
+        "description": "Comprehensive visual identities — logos, typography systems, color architectures, and brand guidelines engineered for recognition.",
+        "title": "Brand Identity & Visual Systems"
+      },
+      {
+        "description": "End-to-end content creation: video editing, motion graphics, photography, and copywriting — all calibrated to your brand voice.",
+        "title": "Content Production"
+      },
+      {
+        "description": "Social media management, analytics reporting, SEO optimization, and growth strategy — measured, refined, and relentless.",
+        "title": "Digital Strategy & Management"
+      }
+    ],
+    "description": "Tailored engagements for every stage of your digital evolution.",
+    "title": "Services",
+    "tagline": "How We Serve"
+  },
+  "projectsList": [
+    {
+      "slug": "star-excellent-academy",
+      "shortDescription": "A comprehensive digital platform for an educational institution.",
+      "id": "1",
+      "lastUpdated": "2026-08-18",
+      "name": "Star Excellent Academy",
+      "description": "A comprehensive digital platform for an educational institution — featuring dynamic content management, responsive design, and an admin CMS built on our API-hydration architecture.",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Firebase"
+      ],
+      "status": "ACTIVE",
+      "category": "Web Design"
+    }
+  ],
+  "contact": {
+    "email": "urdhvascens@gmail.com",
+    "phone": "+91 7891085020 / +91 80037 53540",
+    "description": "We partner with a select number of clients each quarter to ensure every project receives the attention it deserves. If you're ready to elevate your digital presence, we're ready to listen.",
+    "tagline": "Get In Touch",
+    "location": "India",
+    "heading": "Let's Build Something That Endures.",
+    "title": "Start a Dialogue"
+  },
+  "presence": {
+    "instagram": "https://instagram.com/urdhvascens",
+    "linkedin": "https://linkedin.com/company/urdhvascens",
+    "twitter": "https://x.com/urdhvascens",
+    "customLinks": []
+  }
+}

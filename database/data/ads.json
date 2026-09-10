@@ -1,0 +1,40 @@
+{
+  "topBar": {
+    "enabled": true,
+    "rotationIntervalSeconds": 6,
+    "slides": [
+      {
+        "id": "slide-01",
+        "title": "ŪRDHV ASCENS STUDIO — Bespoke Digital Solutions & Brand Identity",
+        "subtitle": "Accepting limited high-impact projects for 2026",
+        "imageUrl": "",
+        "destinationUrl": "https://urdhvascens.com#contact",
+        "active": true,
+        "displayOrder": 1
+      },
+      {
+        "id": "slide-02",
+        "title": "INSTITUTIONAL AI CURRICULUM — Custom Workshops & Campus Licenses",
+        "subtitle": "Empower your faculty and students with ethical AI literacy",
+        "imageUrl": "",
+        "destinationUrl": "https://urdhvascens.com#contact",
+        "active": true,
+        "displayOrder": 2
+      }
+    ]
+  },
+  "sideAds": {
+    "leftAd": {
+      "enabled": false,
+      "imageUrl": "/uploads/sponsor_left.webp",
+      "destinationUrl": "https://urdhvascens.com",
+      "alt": "Ūrdhv Ascens Studio Partner"
+    },
+    "rightAd": {
+      "enabled": false,
+      "imageUrl": "/uploads/sponsor_right.webp",
+      "destinationUrl": "https://urdhvascens.com",
+      "alt": "Ūrdhv Ascens Studio Partner"
+    }
+  }
+}

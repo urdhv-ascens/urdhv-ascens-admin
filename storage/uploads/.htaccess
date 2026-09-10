@@ -1,0 +1,30 @@
+# ==============================================================================
+# Ūrdhv Ascens — Secure Uploads Directory Protection
+# Prevents server-side script execution of user-uploaded content
+# ==============================================================================
+
+# Disable script execution engines
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+# Deny access to any executable script files
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|phps|phar|shtml|cgi|pl|exe|sh|bash)$">
+    Require all denied
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable CGI execution and directory listings
+Options -ExecCGI -Indexes
+
+# Force safe content types
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
