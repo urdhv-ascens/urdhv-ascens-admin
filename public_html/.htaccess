@@ -46,6 +46,11 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 # 4. Clean URL Rewriting for Next.js Static Export (with trailingSlash)
 # ------------------------------------------------------------------------------
 <IfModule mod_rewrite.c>
+    # Next.js 16 Static Export RSC prefetch payload dot-to-slash resolution
+    RewriteRule ^admin/(.*)/__next\.admin\.([^/]+)\.__PAGE__\.txt$ admin/$1/__next.admin/$2/__PAGE__.txt [L]
+    RewriteRule ^admin/__next\.admin\.([^/]+)\.__PAGE__\.txt$ admin/$1/__next.admin/$1/__PAGE__.txt [L]
+    RewriteRule ^admin/__next\.admin\.__PAGE__\.txt$ admin/__next.admin/__PAGE__.txt [L]
+
     # If the exact file exists (CSS, JS, images, uploads), serve it directly
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
