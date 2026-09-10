@@ -12,11 +12,38 @@ handle_cors();
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === 'GET') {
-    // Return live content
+    // Return live content with HTTP caching
     if (file_exists(DATA_FILE)) {
+        $mtime = filemtime(DATA_FILE);
+        $etag = '"content-' . $mtime . '-' . filesize(DATA_FILE) . '"';
+        $last_modified = gmdate('D, d M Y H:i:s', $mtime) . ' GMT';
+
+        // Check If-None-Match (ETag)
+        $client_etag = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE_MATCH']) : '';
+        if ($client_etag === $etag) {
+            http_response_code(304);
+            header('ETag: ' . $etag);
+            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
+            set_cors_headers();
+            exit;
+        }
+
+        // Check If-Modified-Since
+        $client_mod = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) : 0;
+        if ($client_mod && $client_mod >= $mtime) {
+            http_response_code(304);
+            header('ETag: ' . $etag);
+            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
+            set_cors_headers();
+            exit;
+        }
+
         $content = @file_get_contents(DATA_FILE);
         $json = @json_decode($content, true);
         if ($json) {
+            header('ETag: ' . $etag);
+            header('Last-Modified: ' . $last_modified);
+            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
             send_json($json);
         }
     }
