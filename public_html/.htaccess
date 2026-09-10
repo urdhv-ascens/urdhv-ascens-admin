@@ -8,6 +8,11 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
+# Pass Authorization header to PHP in FastCGI / PHP-FPM / LiteSpeed
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
 # ------------------------------------------------------------------------------
 # 1. Security Headers
 # ------------------------------------------------------------------------------
