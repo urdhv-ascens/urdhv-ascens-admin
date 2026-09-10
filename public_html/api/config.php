@@ -16,7 +16,9 @@ define('COURSES_FILE', DATA_DIR . '/courses.json');
 define('READERS_FILE', DATA_DIR . '/readers.json');
 define('ADS_FILE', DATA_DIR . '/ads.json');
 define('UPLOAD_DIR', dirname(__DIR__) . '/uploads');
-define('UPLOAD_URL_PREFIX', '/uploads/');
+$is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+$upload_host = $_SERVER['HTTP_HOST'] ?? 'gold-cat-133405.hostingersite.com';
+define('UPLOAD_URL_PREFIX', ($is_https ? 'https://' : 'http://') . $upload_host . '/uploads/');
 
 // 3. Admin Security Configuration
 // Change this to your preferred admin secret password in production
@@ -60,8 +62,8 @@ function set_cors_headers() {
             header('Access-Control-Allow-Credentials: true');
         }
     }
-    header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key');
+    header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS, PUT');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key, X-Admin-Token');
 }
 
 /**
