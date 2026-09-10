@@ -69,6 +69,12 @@ if ($method === 'POST') {
     if (isset($body['about']['stats'])) {
         $merged['about']['stats'] = $body['about']['stats'];
     }
+    if (isset($body['navigation']['links'])) {
+        $merged['navigation']['links'] = $body['navigation']['links'];
+    }
+    if (isset($body['legal'])) {
+        $merged['legal'] = $body['legal'];
+    }
 
     // Atomically write back to file
     $encoded = json_encode($merged, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
