@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rdr_mtvaapywme83",
+    "name": "afeAFwefg",
+    "contact": "wgSRGAF",
+    "role": "Student",
+    "institution": "WgWSRGwsgvfggrwaSRG",
+    "courseSelected": "students-ai",
+    "consentGiven": true,
+    "ipHash": "64196e59cbd31bc8e2122144962a2ed1f601796456d82f7cc1cf86f331db3176",
+    "createdAt": "2026-09-10T08:47:25.688Z"
+  },
+  {
+    "id": "rdr_mtvaamuoku9i",
+    "name": "afeAFwefg",
+    "contact": "wgSRGAF",
+    "role": "Student",
+    "institution": "WgWSRGwsgvfggrwaSRG",
+    "courseSelected": "students-ai",
+    "consentGiven": true,
+    "ipHash": "64196e59cbd31bc8e2122144962a2ed1f601796456d82f7cc1cf86f331db3176",
+    "createdAt": "2026-09-10T08:47:21.791Z"
+  },
+  {
+    "id": "rdr_mtv98rupdthj",
+    "name": "Test Reader",
+    "contact": "+919876543210",
+    "role": "student",
+    "institution": "Antigravity Academy",
+    "courseSelected": "students-ai",
+    "consentGiven": true,
+    "ipHash": "64196e59cbd31bc8e2122144962a2ed1f601796456d82f7cc1cf86f331db3176",
+    "createdAt": "2026-09-10T08:17:55.203Z"
+  }
+]

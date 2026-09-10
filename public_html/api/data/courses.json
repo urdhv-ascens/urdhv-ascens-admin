@@ -1,0 +1,34 @@
+[
+  {
+    "id": "students-ai",
+    "title": "AI Superpowers for Students",
+    "category": "student",
+    "description": "A comprehensive 6-part visual course engineered to transform how students research, think, build, and master AI tools safely.",
+    "bookletIds": [
+      "student-01",
+      "student-02",
+      "student-03",
+      "student-04",
+      "student-05",
+      "student-06"
+    ],
+    "active": true,
+    "displayOrder": 1
+  },
+  {
+    "id": "teachers-ai",
+    "title": "AI Toolkit for Educators",
+    "category": "teacher",
+    "description": "An actionable 6-part framework for educators to accelerate lesson planning, personalize student assessment, and maintain classroom academic integrity.",
+    "bookletIds": [
+      "teacher-01",
+      "teacher-02",
+      "teacher-03",
+      "teacher-04",
+      "teacher-05",
+      "teacher-06"
+    ],
+    "active": true,
+    "displayOrder": 2
+  }
+]

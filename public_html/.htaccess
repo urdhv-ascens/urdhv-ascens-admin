@@ -1,0 +1,153 @@
+# ==============================================================================
+# Ūrdhv Ascens — Hostinger Web Hosting Apache / LiteSpeed Configuration
+# Optimized for Next.js Static Export + PHP Dynamic API (No Node.js Required)
+# ==============================================================================
+
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# ------------------------------------------------------------------------------
+# 1. Security Headers
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header set X-XSS-Protection "1; mode=block"
+    Header unset X-Powered-By
+    Header unset Server
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: /uploads/ https://*.hostingersite.com https://*.pages.dev; media-src 'self' data: blob: https: /uploads/; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self' https://*.googleapis.com https://*.hostingersite.com https://*.pages.dev;"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 2. Protect Internal Data Directory
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteRule ^api/data/ - [F,L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 3. Handle Direct PHP API Calls (highest priority — skip all other rules)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/api/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. Clean URL Rewriting for Next.js Static Export (with trailingSlash)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    # If the exact file exists (CSS, JS, images, uploads), serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # If the exact directory exists and has an index.html, serve it
+    RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+    RewriteRule ^(.*)/?$ $1/index.html [L]
+
+    # Admin Panel SPA Fallback (allows bookmarking and refreshing admin subroutes)
+    RewriteCond %{REQUEST_URI} ^/admin(/.*)?$ [NC]
+    RewriteCond %{DOCUMENT_ROOT}/admin/index.html -f
+    RewriteRule ^admin(/.*)?$ /admin/index.html [L]
+
+    # 404 Fallback
+    RewriteCond %{DOCUMENT_ROOT}/404.html -f
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ 404.html [L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. Immutable Caching for Hashed Next.js Assets (_next/static/*)
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Hashed JS/CSS/font chunks — never change, cache forever
+    <FilesMatch "\.(js|css|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Images and media — cache 1 year
+    <FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico|avif)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML — always revalidate (ensures fresh content after CMS updates)
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # JSON API data — short cache for visitors, instant refresh for admins
+    <FilesMatch "\.json$">
+        Header set Cache-Control "public, max-age=60, stale-while-revalidate=300"
+    </FilesMatch>
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. Disable ETags (avoid unnecessary 304 round-trips for immutable assets)
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ------------------------------------------------------------------------------
+# 7. Gzip / Deflate Compression
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/json image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff2 font/woff font/ttf application/font-woff2
+</IfModule>
+
+# Brotli compression (LiteSpeed native — significant size reduction over gzip)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/plain text/html text/xml text/css text/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json image/svg+xml
+    AddOutputFilterByType BROTLI_COMPRESS font/woff2 font/woff application/font-woff2
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 8. MIME Types
+# ------------------------------------------------------------------------------
+<IfModule mod_mime.c>
+    AddType application/javascript .js .mjs
+    AddType text/css .css
+    AddType image/webp .webp
+    AddType image/avif .avif
+    AddType font/woff2 .woff2
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 9. PHP Upload Limits for Hostinger (Allowing large video uploads)
+# ------------------------------------------------------------------------------
+<IfModule mod_php.c>
+    php_value upload_max_filesize 100M
+    php_value post_max_size 100M
+    php_value memory_limit 256M
+</IfModule>
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 100M
+    php_value post_max_size 100M
+    php_value memory_limit 256M
+</IfModule>
+<IfModule mod_php8.c>
+    php_value upload_max_filesize 100M
+    php_value post_max_size 100M
+    php_value memory_limit 256M
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 10. Keep-Alive (reduce TCP handshake overhead)
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>

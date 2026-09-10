@@ -1,0 +1,28 @@
+# ==============================================================================
+# Ūrdhv Ascens — Root Fallback Router for Hostinger Git Deployment
+# Handles cases where the repo is cloned directly into public_html/
+# ==============================================================================
+
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# 1. If request is already targeting public_html, let it pass through
+RewriteCond %{REQUEST_URI} ^/public_html [NC]
+RewriteRule ^ - [L]
+
+# 2. If target exists inside public_html/, rewrite to it
+RewriteCond %{DOCUMENT_ROOT}/public_html%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/public_html%{REQUEST_URI} -d
+RewriteRule ^(.*)$ public_html/$1 [L,QSA]
+
+# 3. Root index fallback
+RewriteCond %{REQUEST_URI} ^/?$
+RewriteCond %{DOCUMENT_ROOT}/public_html/index.html -f
+RewriteRule ^$ public_html/index.html [L]
+
+# 4. Admin panel fallback
+RewriteCond %{REQUEST_URI} ^/admin/?$ [NC]
+RewriteCond %{DOCUMENT_ROOT}/public_html/admin/index.html -f
+RewriteRule ^admin/?$ public_html/admin/index.html [L]
