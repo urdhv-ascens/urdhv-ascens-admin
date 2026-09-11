@@ -78,10 +78,15 @@ function set_cors_headers() {
         if ($is_allowed) {
             header("Access-Control-Allow-Origin: $origin");
             header('Access-Control-Allow-Credentials: true');
+        } else {
+            header("Access-Control-Allow-Origin: *");
         }
+    } else {
+        header("Access-Control-Allow-Origin: *");
     }
     header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS, PUT');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key, X-Admin-Token');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Admin-Key, X-Admin-Token, Cache-Control, Pragma, Accept, X-Requested-With, Origin, *');
+    header('Access-Control-Max-Age: 86400');
 }
 
 /**
@@ -136,12 +141,12 @@ function apply_rate_limit($max_requests = 180, $window_seconds = 60) {
  * Handles CORS Preflight OPTIONS requests and applies rate limiting.
  */
 function handle_cors() {
-    apply_rate_limit();
+    set_cors_headers();
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-        set_cors_headers();
-        http_response_code(200);
+        http_response_code(204);
         exit;
     }
+    apply_rate_limit();
 }
 
 /**
