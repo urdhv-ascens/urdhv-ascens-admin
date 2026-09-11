@@ -4,8 +4,9 @@
 # Only https://gold-cat-133405.hostingersite.com/admin/login/ is for admin access
 # ==============================================================================
 
-/admin          /  301!
-/admin/         /  301!
-/admin/login    /  301!
-/admin/login/   /  301!
-/admin/*        /  301!
+/admin          /  301
+/admin/         /  301
+/admin/login    /  301
+/admin/login/   /  301
+/admin/*        /  301
+

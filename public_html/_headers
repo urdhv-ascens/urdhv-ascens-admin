@@ -1,0 +1,22 @@
+# Cloudflare Pages Custom Edge Headers
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache immutable Next.js static chunks indefinitely
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache versioned webp/media assets
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML documents must revalidate to reflect updates
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
