@@ -54,8 +54,10 @@ if ($method === 'GET') {
         return $orderA - $orderB;
     });
 
-    header('ETag: ' . $etag);
-    header('Cache-Control: public, max-age=120, stale-while-revalidate=600');
+    // Zero cache policy for dynamic CMS catalog
+    header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
     send_json($booklets);
 }
 
