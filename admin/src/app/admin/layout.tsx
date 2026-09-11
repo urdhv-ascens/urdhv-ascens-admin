@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { AdminAuthGuard } from "@/components/admin/AdminAuthGuard";
-import { adminLogout } from "@/lib/api-client";
+import { adminLogout, getAdminUser, AdminUser } from "@/lib/api-client";
+import { useState, useEffect } from "react";
 import {
   LayoutDashboard,
   BookOpen,
@@ -16,7 +17,8 @@ import {
   Image as ImageIcon,
   Settings,
   LogOut,
-  ExternalLink
+  ExternalLink,
+  ShieldCheck
 } from "lucide-react";
 
 export default function AdminLayout({
@@ -26,6 +28,11 @@ export default function AdminLayout({
 }) {
   const pathname = usePathname();
   const router = useRouter();
+  const [currentUser, setCurrentUser] = useState<AdminUser | null>(null);
+
+  useEffect(() => {
+    setCurrentUser(getAdminUser());
+  }, [pathname]);
 
   const normalizedPath = pathname ? pathname.replace(/\/+$/, '') : '';
   if (normalizedPath === '/admin/login') {
@@ -95,7 +102,25 @@ export default function AdminLayout({
             })}
           </nav>
           
+          {/* Logged in Admin Profile Badge */}
           <div className="p-4 border-t border-zinc-800 flex flex-col gap-2">
+            <div className="px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+              <div className="flex items-center space-x-2 overflow-hidden">
+                <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center font-bold text-[10px] shrink-0">
+                  {currentUser?.name ? currentUser.name.charAt(0).toUpperCase() : 'D'}
+                </div>
+                <div className="overflow-hidden">
+                  <span className="block text-xs font-bold text-white truncate">
+                    {currentUser?.name || 'DEV'}
+                  </span>
+                  <span className="block text-[10px] text-zinc-400 font-mono truncate">
+                    {currentUser?.email || 'devsol@urdhvascens.online'}
+                  </span>
+                </div>
+              </div>
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+            </div>
+
             <a
               href="https://urdhvascens.pages.dev"
               target="_blank"
@@ -110,7 +135,7 @@ export default function AdminLayout({
               className="flex items-center space-x-2 w-full px-3 py-2 bg-red-500/10 text-red-400 rounded-lg font-medium text-xs hover:bg-red-500/20 transition-colors text-left"
             >
               <LogOut className="w-3.5 h-3.5" />
-              <span>Sign Out</span>
+              <span>Sign Out ({currentUser?.name || 'Admin'})</span>
             </button>
           </div>
         </aside>
@@ -124,7 +149,16 @@ export default function AdminLayout({
               <span className="text-xs font-medium text-emerald-400">Live API Dynamic Sync</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-zinc-400 font-mono hidden sm:inline">admin@urdhvascens.com</span>
+              <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs font-bold text-emerald-400 font-mono">
+                  {currentUser?.name || 'DEV'}
+                </span>
+                <span className="text-zinc-600 text-xs hidden md:inline">|</span>
+                <span className="text-[11px] text-zinc-400 font-mono hidden md:inline">
+                  {currentUser?.email || 'devsol@urdhvascens.online'}
+                </span>
+              </div>
             </div>
           </header>
 

@@ -36,17 +36,44 @@ function getAuthHeaders(): HeadersInit {
   return headers;
 }
 
+export interface AdminUser {
+  id?: string;
+  name: string;
+  email: string;
+  role: string;
+}
+
+export function getAdminUser(): AdminUser | null {
+  if (typeof window === 'undefined') return null;
+  const raw = localStorage.getItem('urdhv_admin_user');
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
 // 1. AUTH API
-export async function adminLogin(passwordOrKey: string, email = 'admin@urdhvascens.com') {
+export async function adminLogin(passwordOrKey: string, email = 'devsol@urdhvascens.online') {
   const res = await fetch(`${API_BASE}/auth.php`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ password: passwordOrKey, email, adminKey: passwordOrKey })
   });
   const data = await res.json();
-  if (data.success && data.token) {
-    localStorage.setItem('urdhv_admin_token', data.token);
-    localStorage.setItem('urdhv_admin_key', passwordOrKey);
+  if (data.success) {
+    if (data.token) {
+      localStorage.setItem('urdhv_admin_token', data.token);
+      localStorage.setItem('urdhv_admin_key', passwordOrKey);
+    }
+    const userPayload: AdminUser = data.user || {
+      id: data.name || (email.toLowerCase().includes('devanand') ? 'Devanand' : 'DEV'),
+      name: data.name || (email.toLowerCase().includes('devanand') ? 'Devanand' : 'DEV'),
+      email: data.email || email,
+      role: data.role || 'admin'
+    };
+    localStorage.setItem('urdhv_admin_user', JSON.stringify(userPayload));
   }
   return data;
 }
@@ -62,6 +89,7 @@ export function adminLogout() {
   }
   localStorage.removeItem('urdhv_admin_token');
   localStorage.removeItem('urdhv_admin_key');
+  localStorage.removeItem('urdhv_admin_user');
 }
 
 export async function verifyAdminSession(): Promise<boolean> {
@@ -75,10 +103,13 @@ export async function verifyAdminSession(): Promise<boolean> {
       headers: getAuthHeaders()
     });
     const data = await res.json();
+    if (data.authenticated && data.user) {
+      localStorage.setItem('urdhv_admin_user', JSON.stringify(data.user));
+    }
     return !!data.authenticated;
   } catch {
-    // If backend unreachable in dev, allow fallback key check
-    return !!key && (key === 'urdhv_admin_2026_secure' || key.length >= 8);
+    // If backend unreachable in dev or preview, check token or key
+    return !!(token || key);
   }
 }
 

@@ -29,33 +29,43 @@ if ($method === 'POST') {
     }
 
     // 2. Validate required visitor fields
-    $name = isset($body['name']) ? trim(strip_tags($body['name'])) : '';
-    $contact = isset($body['contact']) ? trim(strip_tags($body['contact'])) : '';
-    $courseSelected = isset($body['courseSelected']) ? trim(strip_tags($body['courseSelected'])) : '';
-    $role = isset($body['role']) ? trim(strip_tags($body['role'])) : 'Student';
-    $institution = isset($body['institution']) ? trim(strip_tags($body['institution'])) : '';
+    $name           = isset($body['name']) ? trim(strip_tags($body['name'])) : '';
+    $contact        = isset($body['contact']) ? trim(strip_tags($body['contact'])) : '';
+    $phone          = isset($body['phone']) ? trim(strip_tags($body['phone'])) : '';
+    $city           = isset($body['city']) ? trim(strip_tags($body['city'])) : '';
+    $ageGroup       = isset($body['ageGroup']) ? trim(strip_tags($body['ageGroup'])) : '';
+    $industry       = isset($body['industry']) ? trim(strip_tags($body['industry'])) : '';
+    $intent         = isset($body['intent']) ? trim(strip_tags($body['intent'])) : '';
+    $courseSelected = isset($body['courseSelected']) ? trim(strip_tags($body['courseSelected'])) : 'students-ai';
+    $role           = isset($body['role']) ? trim(strip_tags($body['role'])) : 'Individual Learner';
+    $institution    = isset($body['institution']) ? trim(strip_tags($body['institution'])) : '';
 
-    if (empty($name) || empty($contact) || empty($courseSelected)) {
+    if (empty($name) || empty($contact)) {
         send_json([
             'success' => false, 
-            'message' => 'Name, contact (email/phone), and selected course are required.'
+            'message' => 'Full name and email are required for verification.'
         ], 400);
     }
 
-    // 3. Create reader record
+    // 3. Create reader record with rich ad-targeting attributes
     $ip = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
     $ipHash = hash('sha256', $ip . '_urdhv_salt_2026');
 
     $record = [
-        'id' => 'reader_' . bin2hex(random_bytes(8)),
-        'name' => $name,
-        'contact' => $contact,
-        'role' => $role,
-        'institution' => $institution,
+        'id'             => 'reader_' . bin2hex(random_bytes(8)),
+        'name'           => $name,
+        'contact'        => $contact,
+        'phone'          => $phone,
+        'city'           => $city,
+        'ageGroup'       => $ageGroup,
+        'industry'       => $industry,
+        'intent'         => $intent,
+        'role'           => $role,
+        'institution'    => $institution,
         'courseSelected' => $courseSelected,
-        'consentGiven' => true,
-        'registeredAt' => date('c'),
-        'ipHash' => $ipHash
+        'consentGiven'   => true,
+        'registeredAt'   => date('c'),
+        'ipHash'         => $ipHash
     ];
 
     // 4. Append to readers.json atomically
@@ -110,17 +120,22 @@ if ($method === 'GET') {
         return true;
     }));
 
-    // CSV Export option
+    // CSV Export option with complete advertising & demographic segmentation
     if (isset($_GET['export']) && $_GET['export'] === 'csv') {
         header('Content-Type: text/csv; charset=utf-8');
-        header('Content-Disposition: attachment; filename="urdhv_readers_' . date('Y-m-d') . '.csv"');
+        header('Content-Disposition: attachment; filename="urdhv_targeted_leads_' . date('Y-m-d') . '.csv"');
         $out = fopen('php://output', 'w');
-        fputcsv($out, ['ID', 'Name', 'Contact', 'Role', 'Institution', 'Course', 'Registered At']);
+        fputcsv($out, ['ID', 'Name', 'Email', 'Phone', 'City', 'Age Group', 'Industry', 'Intent / Target Segment', 'Role', 'Institution', 'Course Track', 'Registered At']);
         foreach ($filtered as $r) {
             fputcsv($out, [
                 $r['id'] ?? '',
                 $r['name'] ?? '',
                 $r['contact'] ?? '',
+                $r['phone'] ?? '',
+                $r['city'] ?? '',
+                $r['ageGroup'] ?? '',
+                $r['industry'] ?? '',
+                $r['intent'] ?? '',
                 $r['role'] ?? '',
                 $r['institution'] ?? '',
                 $r['courseSelected'] ?? '',

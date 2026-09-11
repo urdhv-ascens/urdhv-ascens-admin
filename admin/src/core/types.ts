@@ -56,18 +56,28 @@ export interface Course {
 export interface ReaderRecord {
   id: string;                      // UUID
   name: string;
-  contact: string;                 // Phone or email
-  role: string;                    // "Student" | "Educator" | "Parent" | "Professional"
-  institution?: string;            // Optional school/college/org
+  contact: string;                 // Primary Email
+  phone?: string;                  // WhatsApp / Mobile Number
+  city?: string;                   // City & State / Region
+  ageGroup?: string;               // Demographic age bracket
+  industry?: string;               // Career industry / Profession
+  intent?: string;                 // Primary learning & commercial interest
+  role: string;                    // "Individual Learner" | "Student" | "Educator" | "Parent" | "Professional"
+  institution?: string;            // School/college/org
   courseSelected: string;          // Course ID
-  consentGiven: boolean;           // Inviolable privacy consent flag
+  consentGiven: boolean;           // Marketing communication & privacy consent flag
   registeredAt: string;            // ISO 8601
   ipHash: string;                  // SHA-256 hashed IP for rate & abuse prevention
 }
 
 export interface ReaderRegistrationInput {
   name: string;
-  contact: string;
+  contact: string;                 // Email
+  phone?: string;                  // WhatsApp / Phone
+  city?: string;                   // City / Region
+  ageGroup?: string;               // Age Group
+  industry?: string;               // Industry / Profession
+  intent?: string;                 // Primary Tech / Learning Intent
   role: string;
   institution?: string;
   courseSelected: string;

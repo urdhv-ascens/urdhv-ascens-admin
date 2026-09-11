@@ -116,10 +116,11 @@ export default function ReadersAdminPage() {
             <thead className="bg-zinc-900/60 border-b border-zinc-800 text-zinc-400 uppercase tracking-wider text-[10px] font-mono">
               <tr>
                 <th className="px-4 py-3">Visitor Name</th>
-                <th className="px-4 py-3">Contact</th>
-                <th className="px-4 py-3">Role / Institution</th>
-                <th className="px-4 py-3">Course Track</th>
-                <th className="px-4 py-3">Consent</th>
+                <th className="px-4 py-3">Email & WhatsApp</th>
+                <th className="px-4 py-3">Demographics & City</th>
+                <th className="px-4 py-3">Industry & Intent</th>
+                <th className="px-4 py-3">Role / Org</th>
+                <th className="px-4 py-3">Course</th>
                 <th className="px-4 py-3">Registered At</th>
                 <th className="px-4 py-3 text-right">Actions</th>
               </tr>
@@ -127,22 +128,37 @@ export default function ReadersAdminPage() {
             <tbody className="divide-y divide-zinc-900 text-zinc-300">
               {loading ? (
                 <tr>
-                  <td colSpan={7} className="px-4 py-8 text-center text-zinc-500">
+                  <td colSpan={8} className="px-4 py-8 text-center text-zinc-500">
                     <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-emerald-400" />
                     <span>Loading reader records...</span>
                   </td>
                 </tr>
               ) : readers.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="px-4 py-8 text-center text-zinc-500">
+                  <td colSpan={8} className="px-4 py-8 text-center text-zinc-500">
                     No reader registrations found yet.
                   </td>
                 </tr>
               ) : (
                 readers.map((r) => (
                   <tr key={r.id} className="hover:bg-zinc-900/40 transition-colors">
-                    <td className="px-4 py-3 font-semibold text-white">{r.name}</td>
-                    <td className="px-4 py-3 font-mono text-[11px] text-zinc-400">{r.contact}</td>
+                    <td className="px-4 py-3 font-semibold text-white">
+                      <span>{r.name}</span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className="block font-mono text-[11px] text-zinc-300">{r.contact}</span>
+                      {r.phone && (
+                        <span className="block font-mono text-[10px] text-emerald-400">{r.phone}</span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3">
+                      {r.city && <span className="block text-zinc-300">{r.city}</span>}
+                      {r.ageGroup && <span className="block text-[10px] text-zinc-500 font-mono">Age: {r.ageGroup}</span>}
+                    </td>
+                    <td className="px-4 py-3">
+                      {r.industry && <span className="block text-zinc-300 text-[11px]">{r.industry}</span>}
+                      {r.intent && <span className="block text-[10px] text-emerald-400/90 font-mono truncate max-w-[180px]">{r.intent}</span>}
+                    </td>
                     <td className="px-4 py-3">
                       <span className="font-medium text-zinc-300">{r.role}</span>
                       {r.institution && (
@@ -153,16 +169,6 @@ export default function ReadersAdminPage() {
                       <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-900 border border-zinc-800 text-emerald-400">
                         {r.courseSelected}
                       </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      {r.consentGiven ? (
-                        <span className="inline-flex items-center space-x-1 text-emerald-400 text-[11px]">
-                          <CheckCircle2 className="w-3.5 h-3.5" />
-                          <span>Given</span>
-                        </span>
-                      ) : (
-                        <span className="text-red-400 text-[11px]">Missing</span>
-                      )}
                     </td>
                     <td className="px-4 py-3 font-mono text-[11px] text-zinc-500">
                       {new Date(r.registeredAt).toLocaleString()}

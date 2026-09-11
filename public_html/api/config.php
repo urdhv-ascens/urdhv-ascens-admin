@@ -20,8 +20,25 @@ $is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset
 $upload_host = $_SERVER['HTTP_HOST'] ?? 'gold-cat-133405.hostingersite.com';
 define('UPLOAD_URL_PREFIX', ($is_https ? 'https://' : 'http://') . $upload_host . '/uploads/');
 
-// 3. Admin Security Configuration
-// Change this to your preferred admin secret password in production
+// 3. Multi-User Admin Security Configuration
+// Encrypted, timing-safe bcrypt password hashes ($2y$12$...)
+define('ADMIN_ACCOUNTS', [
+    'devsol@urdhvascens.online' => [
+        'id' => 'DEV',
+        'name' => 'DEV',
+        'email' => 'devsol@urdhvascens.online',
+        'role' => 'admin',
+        'hash' => '$2y$12$zsAsFU8BHMM6PCrYfDtfDeJDEw2spunXgWz8Qf3kNNrQgefmR7pcm'
+    ],
+    'devanand@urdhvascens.online' => [
+        'id' => 'Devanand',
+        'name' => 'Devanand',
+        'email' => 'devanand@urdhvascens.online',
+        'role' => 'admin',
+        'hash' => '$2y$12$j3uIYHloeR3Lp6LCDVgGIOI.QUCM2mJTp2Fto/nzqtuarFK4VjeQu'
+    ]
+]);
+
 define('DEFAULT_ADMIN_KEY', 'urdhv_admin_2026_secure');
 $admin_secret_key = getenv('URDHV_ADMIN_KEY') ?: DEFAULT_ADMIN_KEY;
 define('ADMIN_SECRET_KEY', $admin_secret_key);
@@ -219,6 +236,24 @@ function verify_session_token($token) {
 }
 
 /**
+ * Retrieves session user record if valid, or null.
+ */
+function get_session_user($token) {
+    if (empty($token) || !is_string($token)) return null;
+    $clean_token = preg_replace('/[^a-zA-Z0-9_-]/', '', $token);
+    if (strlen($clean_token) < 16) return null;
+    
+    $session_file = DATA_DIR . '/session_' . $clean_token . '.json';
+    if (!file_exists($session_file)) return null;
+    
+    $data = @json_decode(file_get_contents($session_file), true);
+    if (!$data || !isset($data['expires']) || time() > $data['expires']) {
+        return null;
+    }
+    return $data;
+}
+
+/**
  * Invalidates and deletes a session token on logout.
  */
 function invalidate_session_token($token) {
@@ -236,11 +271,13 @@ function invalidate_session_token($token) {
 /**
  * Creates a persistent admin session on Hostinger.
  */
-function create_session_token($email = 'admin@urdhvascens.com') {
+function create_session_token($email = 'devsol@urdhvascens.online', $name = 'DEV', $role = 'admin') {
     $token = bin2hex(random_bytes(24));
     $session_file = DATA_DIR . '/session_' . $token . '.json';
     $data = [
         'email' => $email,
+        'name' => $name,
+        'role' => $role,
         'created' => time(),
         'expires' => time() + SESSION_LIFETIME
     ];
