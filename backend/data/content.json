@@ -1,0 +1,615 @@
+{
+  "siteSettings": {
+    "companyName": "Ūrdhv Ascens",
+    "tagline": "A Digital Aesthetics & Functionality Hub",
+    "logoUrl": "/logo.webp",
+    "viewerUrl": "https://urdhv-viewer.pages.dev"
+  },
+  "hero": {
+    "tagline": "DIGITAL CRAFT / UNCOMPROMISING PRECISION",
+    "title": "We help you to Ascend.",
+    "description": "Ūrdhv Ascens delivers enterprise-grade design, digital presence management, and technical solutions for brands that demand distinction.",
+    "backgroundImage": "/assets/images/hero-bg.webp",
+    "backgroundBlur": 4,
+    "backgroundOpacity": 55,
+    "primaryCtaText": "Access AI Courses (Free)",
+    "primaryCtaLink": "https://urdhv-viewer.pages.dev",
+    "primaryCtaAction": "modal",
+    "secondaryCtaText": "Discuss Project",
+    "secondaryCtaLink": "/#contact"
+  },
+  "about": {
+    "title": "About Us",
+    "imageUrl": "/assets/images/About-Us.webp",
+    "description": "At Ūrdhv Ascens, we don't just build websites or design logos - we architect digital legacies. We believe that aesthetics without robust functionality is merely decoration, and robust functionality without aesthetics is a missed connection. Our philosophy bridges this gap, delivering digital experiences that are as performant as they are beautiful.",
+    "stats": [
+      {
+        "value": "24+",
+        "label": "Enterprise Projects"
+      },
+      {
+        "value": "100%",
+        "label": "Client Retention"
+      },
+      {
+        "value": "9",
+        "label": "Core Disciplines"
+      }
+    ],
+    "video": {
+      "enabled": false,
+      "videoId": "",
+      "title": "Ūrdhv Ascens Showreel",
+      "posterUrl": ""
+    },
+    "category": "The Philosophy",
+    "badges": {
+      "badge1": "STUDIO PHILOSOPHY",
+      "badge2": "DIGITAL ARCHITECTURE",
+      "badge3": "EST. 2026"
+    }
+  },
+  "capabilities": {
+    "tagline": "What We Do",
+    "title": "Studio Capabilities",
+    "description": "One nexus for every digital solution - engineered with intent across 9 core disciplines.",
+    "list": [
+      {
+        "id": "cap-ai-automation",
+        "title": "AI & Workflow Automation",
+        "category": "Artificial Intelligence",
+        "description": "LLM integrations, custom chatbots, automated CRM pipelines, and intelligent workflows that scale operations.",
+        "icon": "Cpu",
+        "tags": [
+          "LLMs",
+          "Chatbots",
+          "Pipelines",
+          "Workflow"
+        ]
+      },
+      {
+        "id": "cap-web-design",
+        "title": "Website Design & Development",
+        "category": "Web Architecture",
+        "description": "Interfaces that command attention. Every layout, interaction, and mobile response meticulously crafted to captivate and convert.",
+        "icon": "Monitor",
+        "tags": [
+          "Next.js 16",
+          "Tailwind",
+          "Responsive",
+          "SEO"
+        ]
+      },
+      {
+        "id": "cap-brand-identity",
+        "title": "Brand Identity & Visual Systems",
+        "category": "Creative Direction",
+        "description": "Visual identities that transcend the ordinary. From brand guidelines to bespoke typography and unified design tokens.",
+        "icon": "PenTool",
+        "tags": [
+          "Logos",
+          "Design Tokens",
+          "Typography"
+        ]
+      },
+      {
+        "id": "cap-content-production",
+        "title": "Content Production",
+        "category": "Studio Media",
+        "description": "High-fidelity multimedia creation tailored for multi-platform distribution and audience retention.",
+        "icon": "Layers",
+        "tags": [
+          "Multimedia",
+          "Direction",
+          "Production"
+        ]
+      },
+      {
+        "id": "cap-video-editing",
+        "title": "Video Editing & Motion Graphics",
+        "category": "Motion Design",
+        "description": "Motion that moves. Cinematic post-production, visual effects, and color grading with studio-grade polish.",
+        "icon": "Video",
+        "tags": [
+          "Cinematic",
+          "Reels",
+          "Color Grading",
+          "VFX"
+        ]
+      },
+      {
+        "id": "cap-social-media",
+        "title": "Social Media Management",
+        "category": "Growth Strategy",
+        "description": "Strategic presence management. Content calendars, audience cultivation, and analytics-driven growth.",
+        "icon": "Smartphone",
+        "tags": [
+          "Growth",
+          "Distribution",
+          "Community"
+        ]
+      },
+      {
+        "id": "cap-lead-gen",
+        "title": "Lead Generation & CRM",
+        "category": "Marketing Automation",
+        "description": "Targeted inquiry capture, automated WhatsApp routing, and structured lead handling.",
+        "icon": "Target",
+        "tags": [
+          "Funnels",
+          "WhatsApp CRM",
+          "Conversion"
+        ]
+      },
+      {
+        "id": "cap-digitization",
+        "title": "Content Digitization",
+        "category": "Data & Archival",
+        "description": "Document scanning, OCR extraction, metadata formatting, and high-fidelity archival preservation.",
+        "icon": "FileText",
+        "tags": [
+          "OCR",
+          "Archiving",
+          "Formatting"
+        ]
+      },
+      {
+        "id": "cap-copywriting",
+        "title": "Copywriting & Storytelling",
+        "category": "Communications",
+        "description": "Persuasive sales copy, broadcast messaging, and brand editorial engineered to convert.",
+        "icon": "Feather",
+        "tags": [
+          "Conversion Copy",
+          "Editorial",
+          "Scripts"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "tagline": "How We Serve",
+    "title": "Precision Services",
+    "description": "Tailored engagements engineered from foundational concept to enterprise execution.",
+    "list": [
+      {
+        "id": "srv-web-dev",
+        "number": "01",
+        "title": "Website Design & Digital Flagships",
+        "category": "Web Architecture",
+        "description": "Custom high-converting websites, corporate landing pages, web applications, and CMS-managed portals built on modern decoupled architectures.",
+        "tags": [
+          "Full-Stack",
+          "Fast Load",
+          "Mobile-First"
+        ]
+      },
+      {
+        "id": "srv-ai-bots",
+        "number": "02",
+        "title": "WhatsApp Bots, AI & Automation",
+        "category": "Automation",
+        "description": "Tailored WhatsApp bots, automated inquiry triage, lead qualification workflows, and custom LLM copilots that reduce operational overhead.",
+        "tags": [
+          "WhatsApp API",
+          "CRM Sync",
+          "24/7 Response"
+        ]
+      },
+      {
+        "id": "srv-brand-systems",
+        "number": "03",
+        "title": "Brand Identity & Visual Systems",
+        "category": "Design",
+        "description": "Holistic brand systems, vector logo suites, custom typography hierarchies, brand style manuals, and cross-medium asset packages.",
+        "tags": [
+          "Brand Guidelines",
+          "Vector Assets",
+          "Print & Web"
+        ]
+      },
+      {
+        "id": "srv-video-editing",
+        "number": "04",
+        "title": "Cinematic Video Editing & Motion",
+        "category": "Motion",
+        "description": "Studio-grade video editing, engaging reels, brand showcase films, sound design, and color grading tailored for high viewer retention.",
+        "tags": [
+          "4K Color Grade",
+          "Sound Design",
+          "High Retention"
+        ]
+      },
+      {
+        "id": "srv-social-mgmt",
+        "number": "05",
+        "title": "Social Media Management & Strategy",
+        "category": "Growth",
+        "description": "Full-service social media presence, strategic content planning, audience growth analytics, and multi-channel campaign orchestration.",
+        "tags": [
+          "Content Calendar",
+          "Community",
+          "Analytics"
+        ]
+      },
+      {
+        "id": "srv-digitization",
+        "number": "06",
+        "title": "Content Digitization & OCR Archival",
+        "category": "Archival",
+        "description": "High-speed document scanning, accurate OCR text extraction, archival formatting, and conversion of physical documentation into structured digital records.",
+        "tags": [
+          "OCR Text",
+          "Metadata Tagging",
+          "Cloud Storage"
+        ]
+      },
+      {
+        "id": "srv-ebook-publishing",
+        "number": "07",
+        "title": "Educational & E-Book Publishing",
+        "category": "Publishing",
+        "description": "Custom publication layouts, interactive flipbooks, booklet packaging, and high-performance WebP reader engines for schools and creators.",
+        "tags": [
+          "Interactive Flipbooks",
+          "CDN Delivery",
+          "Anti-Piracy"
+        ]
+      },
+      {
+        "id": "srv-copywriting",
+        "number": "08",
+        "title": "Conversion Copywriting & Messaging",
+        "category": "Copywriting",
+        "description": "Persuasive sales letters, WhatsApp broadcast campaigns, direct response ad scripts, and SEO content engineered for measurable action.",
+        "tags": [
+          "Direct Response",
+          "Broadcasts",
+          "SEO Content"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "tagline": "Selected Work",
+    "title": "Curated Projects",
+    "description": "Digital systems and client flagship productions delivered with precision.",
+    "intervalSeconds": 5
+  },
+  "projectsList": [
+    {
+      "id": "1",
+      "slug": "star-excellent-academy",
+      "name": "Star Excellent Academy",
+      "category": "Web Architecture & Brand Solutions",
+      "status": "ACTIVE",
+      "displayOrder": 1,
+      "client": "Star Excellent Trust",
+      "year": "2026",
+      "url": "https://starexcellent.in/",
+      "imageUrl": "/assets/images/projects/star-excellent-academy.webp",
+      "tech": [
+        "Web Architecture",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "Next.js"
+      ],
+      "shortDescription": "Enterprise educational flagship web platform, institutional PDF publications & graphic designs, and strategic social media management.",
+      "description": "A comprehensive digital flagship and brand architecture for Star Excellent Academy — featuring responsive web development, custom PDF curriculum publications & promotional graphic designs, and full-funnel social media presence management.",
+      "lastUpdated": "2026-09-10"
+    },
+    {
+      "id": "2",
+      "slug": "omkara-store",
+      "name": "Omkara Store",
+      "category": "E-Commerce & Digital Flagship",
+      "status": "ACTIVE",
+      "displayOrder": 2,
+      "client": "Omkara Enterprises",
+      "year": "2026",
+      "url": "https://omkara-store.pages.dev/",
+      "imageUrl": "/assets/images/projects/omkara-store.webp",
+      "tech": [
+        "E-Commerce",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "Cloudflare Pages"
+      ],
+      "shortDescription": "High-conversion modern e-commerce storefront, product catalog PDF & promotional graphic design suites, and social media campaign management.",
+      "description": "An elevated e-commerce storefront for Omkara Store — built with edge delivery, bespoke digital product brochures & promotional graphic designs, and targeted social media marketing & brand community management.",
+      "lastUpdated": "2026-09-10"
+    },
+    {
+      "id": "3",
+      "slug": "enhance-doorstep",
+      "name": "Enhance Doorstep",
+      "category": "Home Beauty Salon & Self-Care Services",
+      "status": "ACTIVE",
+      "displayOrder": 3,
+      "client": "Enhance Doorstep",
+      "year": "2026",
+      "url": "https://enhance-doorstep.github.io/Enhance-Doorstep/",
+      "imageUrl": "/assets/images/projects/enhance-doorstep.webp",
+      "tech": [
+        "Web Architecture",
+        "PDF & Graphic Design",
+        "Social Media Management",
+        "GitHub Pages"
+      ],
+      "shortDescription": "Modern doorstep service flagship website, service rate cards & marketing PDF graphic designs, and active social media management.",
+      "description": "A luxury home beauty salon and doorstep self-care service platform — featuring bespoke aesthetic treatments at home, curated beauty routines, and brand identity expressed in black, golden, and Indian line abstract art design.",
+      "lastUpdated": "2026-09-10"
+    },
+    {
+      "id": "4",
+      "slug": "urdhv-ai-courses",
+      "name": "Ūrdhv Ascens AI Courses & Curriculum Reader",
+      "category": "AI Education & Interactive Publishing",
+      "status": "ACTIVE",
+      "displayOrder": 4,
+      "client": "Ūrdhv Ascens Educational Network",
+      "year": "2026",
+      "url": "https://urdhv-viewer.pages.dev/",
+      "imageUrl": "/assets/images/projects/urdhv-ai-courses.webp",
+      "tech": [
+        "AI Courses",
+        "HTML5 Canvas",
+        "WebP Streaming",
+        "TypeScript"
+      ],
+      "shortDescription": "Decoupled 12-booklet AI curriculum network powered by custom HTML5 Canvas rendering, bounded memory management, and zero-proxy CDN architecture.",
+      "description": "Our flagship open-access educational ecosystem featuring free AI learning courses, high-performance HTML5 Canvas reader engine, and interactive WebP booklet distribution.",
+      "lastUpdated": "2026-09-10"
+    }
+  ],
+  "contact": {
+    "tagline": "Get In Touch",
+    "title": "Start a Dialogue",
+    "heading": "Let's Build Something That Endures.",
+    "description": "We partner with a select number of clients each quarter to ensure every project receives the attention it deserves. If you're ready to elevate your digital presence, we're ready to listen.",
+    "email": "urdhvascens@gmail.com",
+    "phone": "+91 7891085020 / +91 80037 53540",
+    "location": "India",
+    "secondaryPhone": "+91 80037 53540",
+    "responseTime": "Replies typically within 12 hours"
+  },
+  "presence": {
+    "instagram": "https://instagram.com/urdhvascens",
+    "linkedin": "https://linkedin.com/company/urdhvascens",
+    "twitter": "https://x.com/urdhvascens",
+    "customLinks": []
+  },
+  "navigation": {
+    "brandTitle": "ŪRDHV ASCENS",
+    "logoUrl": "/logo.webp",
+    "links": [
+      {
+        "label": "Capabilities",
+        "href": "/#capabilities"
+      },
+      {
+        "label": "Services",
+        "href": "/#services"
+      },
+      {
+        "label": "Work",
+        "href": "/#projects"
+      },
+      {
+        "label": "Contact",
+        "href": "/#contact"
+      }
+    ],
+    "courseButton": {
+      "text": "AI Courses (Free)",
+      "href": "https://urdhv-viewer.pages.dev"
+    },
+    "ctaButton": {
+      "text": "Discuss Project",
+      "href": "/#contact"
+    }
+  },
+  "footer": {
+    "description": "A bespoke digital studio for brands that refuse to blend in. Precision engineered. Distinctly elevated.",
+    "locationNote": "Based in India / Serving Select Global Engagements",
+    "copyrightText": "© 2026 ŪRDHV ASCENS. All visual identities and course frameworks reserved.",
+    "creditText": "Engineered on Cloudflare Pages Edge CDN & Hostinger Dynamic Storage",
+    "socialLinks": {
+      "twitter": "https://x.com/urdhvascens",
+      "linkedin": "https://linkedin.com/company/urdhvascens",
+      "instagram": "https://instagram.com/urdhvascens",
+      "github": "https://github.com/urdhv-ascens",
+      "whatsapp": "https://wa.me/917891085020"
+    }
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Universal Privacy Policy & Data Ingestion Charter",
+      "effectiveDate": "September 2026",
+      "lastUpdated": "September 2026 (Statutory Revision under DPDPA 2023)",
+      "subtitle": "Comprehensive data ingestion, telemetry surveillance, commercialization, and algorithmic training governance under Indian and extraterritorial jurisprudence.",
+      "sections": [
+        {
+          "heading": "1. Comprehensive Jurisdictional Preamble, Corporate Persona, and Deemed Constructive Consent",
+          "content": "This Digital Privacy Instrument, Data Ingestion Charter, and Commercial Monetization Framework (hereinafter designated as the \"Privacy Policy\" or \"Charter\") constitutes a legally binding, indivisible regulatory contract executed by and between you (whether operating as an individual visitor, registered reader, academic learner, corporate agent, or automated technical client, collectively referred to as the \"User\", \"Data Principal\", or \"You\") and Ūrdhv Ascens, together with its parent entities, subsidiaries, operating divisions, assignees, technical consortiums, and commercial monetization affiliates (hereinafter collectively referred to as \"Ūrdhv Ascens\", \"the Studio\", \"Company\", \"We\", \"Us\", or \"Our\").\n\nBY NAVIGATING, ACCESSING, SCANNING, CACHING, SCRAPING, BROWSING, OR INTERACTING WITH ANY ELEMENT, ENDPOINT, API, PAGE, ASSET, GRAPHICAL INTERFACE, OR CURRICULUM VIEWER OPERATED ON OR THROUGH URDHVASCENS.PAGES.DEV, URDHV-VIEWER.PAGES.DEV, URDHVASCENS.ONLINE, OR ANY ASSOCIATED REPOSITORIES (COLLECTIVELY, THE \"PLATFORM\"), OR BY TAPPING, SUBMITTING, OR TRANSMITTING THE ONE-TIME READER ACTIVATION INSTRUMENT, YOU UNEQUIVOCALLY, IRREVOCABLY, AND UNCONDITIONALLY RATIFY, CONFIRM, AND EXECUTE THIS POLICY.\n\nYou expressly concede that such interaction constitutes voluntary and unequivocal consent under Section 4 and Section 7 of the Digital Personal Data Protection Act, 2023 (DPDPA), Section 43A and Section 72A of the Information Technology Act, 2000 (as amended), the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, and the Indian Contract Act, 1872. If you do not agree with each and every aggressive data processing, monetization, and inter-jurisdictional transfer covenant set forth herein, you are peremptorily commanded to terminate all network connections, purge all local browser caches, and permanently cease access to the Platform."
+        },
+        {
+          "heading": "2. Hyper-Granular Categorization of Ingested Telemetry, Identity Parameters, and Hardware Fingerprints",
+          "content": "You acknowledge that Ūrdhv Ascens maintains an expansive, automated, low-latency data surveillance architecture designed to capture, record, catalog, and synthesize every qualitative and quantitative signal generated during your interaction with our infrastructure. The categories of data ingested comprise, without limitation:\n\n(a) Voluntary Demographic and Identity Ingestion: Complete legal nomenclature, personal telephone numbers, cellular network MSISDN identifiers, WhatsApp messaging endpoints, personal and enterprise electronic mail addresses, localized geographic territory (municipality, state, pincode, postal region), age brackets, educational classifications, collegiate institutions, corporate affiliations, organizational designations, and self-identified technical proficiencies.\n\n(b) Machine-Level Fingerprinting and Hardware Telemetry: Invariable hardware serial hashes, device model strings, browser engine architectures, operating system builds, WebGL canvas render tokens, audio-context latency benchmarks, GPU architecture attributes, screen color depth, system font metrics, touch-point counts, battery level dynamics, and network connection characteristics (round-trip time, downlink bandwidth, Wi-Fi versus cellular identifiers).\n\n(c) Granular Behavioral and Optical Kinetics: Micro-level reader tracking encompassing mouse cursor trajectories, scrolling velocity acceleration, dwell duration per booklet folio, viewport coordinates, reading interruptions, zoom magnification actions, click coordinates, focal point heatmaps, and interaction timestamps.\n\n(d) Telecommunications and Network Vectors: Public and private Internet Protocol (IP) vectors, autonomous system numbers (ASN), internet service provider (ISP) identifiers, reverse DNS entries, proxy and VPN headers, TLS cipher negotiation parameters, and HTTP request headers."
+        },
+        {
+          "heading": "3. Submerged Commercial Syndication, Third-Party Data Monetization, and Asset Alienation Rights",
+          "content": "SUBJECT TO THE MAXIMUM BOUNDS PERMITTED BY THE DIGITAL PERSONAL DATA PROTECTION ACT, 2023, AND ALL APPLICABLE STATUTES OF THE REPUBLIC OF INDIA, YOU EXPLICITLY GRANT TO ŪRDHV ASCENS THE UNENCUMBERED, UNRESTRICTED, PERPETUAL, IRREVOCABLE, ALIENATION-READY, AND COMPENSABLE RIGHT TO MONETIZE, SYNDICATE, LICENSE, LEASE, SUB-LEASE, TRANSFER, ASSIGN, AND SELL ALL INGESTED, DERIVED, AGGREGATED, OR ENRICHED DATA ASSETS.\n\nYou expressly understand and covenant that:\n(i) Commercial Data Syndication: The Company operates commercial alliances with third-party data aggregators, adtech demand-side platforms (DSPs), behavioral analytics networks, programmatic media brokerages, educational recruiters, corporate staffing agencies, and institutional advertisers (collectively designated as \"Commercial Synergy Consortia\").\n(ii) Alienation for Enterprise Value: Your demographic parameters (including age, technical inclinations, educational institution, corporate career status, and communication endpoints) may be commercialized, segmented, and transferred to our Commercial Synergy Consortia to facilitate targeted advertising, direct outbound corporate communications, marketing campaigns, and algorithmic profile synthesis.\n(iii) Waiver of Royalty and Profit Equivalence: You expressly, irrevocably renounce any claim, right, equity, title, or interest in any revenue, consideration, intellectual property, dividend, or financial consideration realized by Ūrdhv Ascens through the sale, licensing, syndication, or commercial exploitation of your ingested data.\n(iv) Statutory Alignment under Indian Law: Such processing is conducted under the lawful premise of your explicit opt-in submission for service access (Section 4(1), DPDPA 2023), for legitimate uses including employment screening and educational fulfillment (Section 7, DPDPA 2023), and pursuant to voluntary consent executed under Section 10 of the Indian Contract Act, 1872."
+        },
+        {
+          "heading": "4. Universal Artificial Intelligence Model Ingestion and Machine Learning Fine-Tuning License",
+          "content": "By accessing the Platform or submitting any data or communication to Ūrdhv Ascens, you hereby grant to the Company a worldwide, perpetual, irrevocable, fully paid-up, royalty-free, transferable, and sublicensable license to ingest, tokenize, embed, compress, process, and deploy all user-submitted information, reading patterns, interaction logs, query inputs, and demographic records into current and future artificial intelligence architectures.\n\nThis includes, without limitation, the training, reinforcement learning from human feedback (RLHF), fine-tuning, context-window pre-training, parameter optimization, and commercial deployment of Large Language Models (LLMs), visual generation engines, multimodal reasoning agents, behavioral forecasting networks, and automated marketing generation pipelines. You agree that once ingested into neural network weights, embeddings, or mathematical vector spaces, such data becomes permanently synthesized into the proprietary intellectual property of Ūrdhv Ascens, and cannot be excised, forgotten, unlearned, or segregated upon request."
+        },
+        {
+          "heading": "5. Cross-Border Extraterritorial Exfiltration and Global Cloud Distribution",
+          "content": "You explicitly authorize and consent to the transmission, routing, storage, mirroring, and processing of your personal data across servers, edge computing nodes, and distributed databases located in multiple sovereign jurisdictions outside the Republic of India, including but not limited to the United States of America, the European Union, Singapore, and jurisdictions where our content delivery and cloud partners (such as Cloudflare, Inc. and Hostinger International Ltd.) maintain infrastructure.\n\nPursuant to Section 16 of the Digital Personal Data Protection Act, 2023, you acknowledge that the Central Government of India may notify restrictions on data transfers to certain foreign countries; however, you expressly agree that unless a jurisdiction is categorically blacklisted by an official gazette notification, Ūrdhv Ascens possesses full contractual authority to transfer and process your data worldwide without obtaining supplementary individual approvals."
+        },
+        {
+          "heading": "6. Indefinite Retention Horizons and Technical Impracticability of Complete Erasure",
+          "content": "Notwithstanding any statutory terminology regarding data erasure or account deletion, you acknowledge and agree that Ūrdhv Ascens retains all ingested personal and telemetry data for an indefinite duration, spanning the entire corporate lifespan of the Company and its successors.\n\nData shall be retained for purposes of forensic fraud prevention, rate-limit defense, machine learning continuity, commercial recordkeeping, defense of anticipated litigation, and algorithmic integrity. While a Data Principal may submit a written request to suppress direct promotional messaging, you acknowledge that completely deleting, purging, or excising data from compiled database snapshots, cold-storage tape archives, distributed cryptographic ledgers, and deep machine-learning checkpoints is technically unfeasible and commercially impracticable, and the Company is formally exempt from performing complete erasure where retention is necessary for the establishment, exercise, or defense of legal claims under Section 17 of the DPDPA 2023."
+        },
+        {
+          "heading": "7. Compulsory Promotional Vectors, WhatsApp Commercial Push, and Direct Marketing",
+          "content": "By providing your cellular phone number and email address, you grant Ūrdhv Ascens and its authorized marketing syndicates express permission to contact you via WhatsApp messages, Automated Voice Calls (IVR), Short Message Service (SMS), Rich Communication Services (RCS), and electronic mail for commercial, educational, promotional, and marketing announcements.\n\nYou explicitly declare that this authorization supersedes and overrides any registration on the National Customer Preference Register (NCPR) or National Do Not Call (NDNC) Registry maintained under the Telecom Regulatory Authority of India (TRAI) Telecom Commercial Communications Customer Preference Regulations, 2018. You agree to hold Ūrdhv Ascens completely harmless from any perceived violation of telecom marketing restrictions."
+        },
+        {
+          "heading": "8. Exhaustive Multi-Stage Dispute Resolution, Burdensome Grievance Mechanics, and Cost Allocation",
+          "content": "In compliance with Rule 5(9) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the Digital Personal Data Protection Act, 2023, Ūrdhv Ascens designates its Grievance Officer:\nDesignation: Chief Privacy & Data Governance Desk\nCorporate Email: urdhvascens@gmail.com\nPhysical Jurisdiction: Jaipur, Rajasthan, Republic of India.\n\nPrior to lodging any complaint with the Data Protection Board of India or any regulatory tribunal, you MUST exhaust the mandatory internal resolution protocol:\n(a) You must transmit a physical, notarized notice of grievance via registered post acknowledgment due to our Jaipur operational address, detailing the exact nature of the dispute, providing government-issued identification proof, and depositing a refundable administrative review deposit of INR 10,000 to cover preliminary forensic investigation costs.\n(b) The Company shall have an unfettered window of one hundred and twenty (120) business days to investigate and resolve the grievance in its sole discretion.\n(c) Any attempt to initiate external administrative or judicial proceedings prior to the formal exhaustion of this 120-day window constitutes a material breach of contract, subjecting the Data Principal to liquidated damages of INR 5,00,000 payable immediately to Ūrdhv Ascens."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Universal Privacy Policy & Data Ingestion Charter",
+      "effectiveDate": "September 2026",
+      "lastUpdated": "September 2026 (Statutory Revision under DPDPA 2023)",
+      "subtitle": "Comprehensive data ingestion, telemetry surveillance, commercialization, and algorithmic training governance under Indian and extraterritorial jurisprudence.",
+      "sections": [
+        {
+          "heading": "1. Comprehensive Jurisdictional Preamble, Corporate Persona, and Deemed Constructive Consent",
+          "content": "This Digital Privacy Instrument, Data Ingestion Charter, and Commercial Monetization Framework (hereinafter designated as the \"Privacy Policy\" or \"Charter\") constitutes a legally binding, indivisible regulatory contract executed by and between you (whether operating as an individual visitor, registered reader, academic learner, corporate agent, or automated technical client, collectively referred to as the \"User\", \"Data Principal\", or \"You\") and Ūrdhv Ascens, together with its parent entities, subsidiaries, operating divisions, assignees, technical consortiums, and commercial monetization affiliates (hereinafter collectively referred to as \"Ūrdhv Ascens\", \"the Studio\", \"Company\", \"We\", \"Us\", or \"Our\").\n\nBY NAVIGATING, ACCESSING, SCANNING, CACHING, SCRAPING, BROWSING, OR INTERACTING WITH ANY ELEMENT, ENDPOINT, API, PAGE, ASSET, GRAPHICAL INTERFACE, OR CURRICULUM VIEWER OPERATED ON OR THROUGH URDHVASCENS.PAGES.DEV, URDHV-VIEWER.PAGES.DEV, URDHVASCENS.ONLINE, OR ANY ASSOCIATED REPOSITORIES (COLLECTIVELY, THE \"PLATFORM\"), OR BY TAPPING, SUBMITTING, OR TRANSMITTING THE ONE-TIME READER ACTIVATION INSTRUMENT, YOU UNEQUIVOCALLY, IRREVOCABLY, AND UNCONDITIONALLY RATIFY, CONFIRM, AND EXECUTE THIS POLICY.\n\nYou expressly concede that such interaction constitutes voluntary and unequivocal consent under Section 4 and Section 7 of the Digital Personal Data Protection Act, 2023 (DPDPA), Section 43A and Section 72A of the Information Technology Act, 2000 (as amended), the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, and the Indian Contract Act, 1872. If you do not agree with each and every aggressive data processing, monetization, and inter-jurisdictional transfer covenant set forth herein, you are peremptorily commanded to terminate all network connections, purge all local browser caches, and permanently cease access to the Platform."
+        },
+        {
+          "heading": "2. Hyper-Granular Categorization of Ingested Telemetry, Identity Parameters, and Hardware Fingerprints",
+          "content": "You acknowledge that Ūrdhv Ascens maintains an expansive, automated, low-latency data surveillance architecture designed to capture, record, catalog, and synthesize every qualitative and quantitative signal generated during your interaction with our infrastructure. The categories of data ingested comprise, without limitation:\n\n(a) Voluntary Demographic and Identity Ingestion: Complete legal nomenclature, personal telephone numbers, cellular network MSISDN identifiers, WhatsApp messaging endpoints, personal and enterprise electronic mail addresses, localized geographic territory (municipality, state, pincode, postal region), age brackets, educational classifications, collegiate institutions, corporate affiliations, organizational designations, and self-identified technical proficiencies.\n\n(b) Machine-Level Fingerprinting and Hardware Telemetry: Invariable hardware serial hashes, device model strings, browser engine architectures, operating system builds, WebGL canvas render tokens, audio-context latency benchmarks, GPU architecture attributes, screen color depth, system font metrics, touch-point counts, battery level dynamics, and network connection characteristics (round-trip time, downlink bandwidth, Wi-Fi versus cellular identifiers).\n\n(c) Granular Behavioral and Optical Kinetics: Micro-level reader tracking encompassing mouse cursor trajectories, scrolling velocity acceleration, dwell duration per booklet folio, viewport coordinates, reading interruptions, zoom magnification actions, click coordinates, focal point heatmaps, and interaction timestamps.\n\n(d) Telecommunications and Network Vectors: Public and private Internet Protocol (IP) vectors, autonomous system numbers (ASN), internet service provider (ISP) identifiers, reverse DNS entries, proxy and VPN headers, TLS cipher negotiation parameters, and HTTP request headers."
+        },
+        {
+          "heading": "3. Submerged Commercial Syndication, Third-Party Data Monetization, and Asset Alienation Rights",
+          "content": "SUBJECT TO THE MAXIMUM BOUNDS PERMITTED BY THE DIGITAL PERSONAL DATA PROTECTION ACT, 2023, AND ALL APPLICABLE STATUTES OF THE REPUBLIC OF INDIA, YOU EXPLICITLY GRANT TO ŪRDHV ASCENS THE UNENCUMBERED, UNRESTRICTED, PERPETUAL, IRREVOCABLE, ALIENATION-READY, AND COMPENSABLE RIGHT TO MONETIZE, SYNDICATE, LICENSE, LEASE, SUB-LEASE, TRANSFER, ASSIGN, AND SELL ALL INGESTED, DERIVED, AGGREGATED, OR ENRICHED DATA ASSETS.\n\nYou expressly understand and covenant that:\n(i) Commercial Data Syndication: The Company operates commercial alliances with third-party data aggregators, adtech demand-side platforms (DSPs), behavioral analytics networks, programmatic media brokerages, educational recruiters, corporate staffing agencies, and institutional advertisers (collectively designated as \"Commercial Synergy Consortia\").\n(ii) Alienation for Enterprise Value: Your demographic parameters (including age, technical inclinations, educational institution, corporate career status, and communication endpoints) may be commercialized, segmented, and transferred to our Commercial Synergy Consortia to facilitate targeted advertising, direct outbound corporate communications, marketing campaigns, and algorithmic profile synthesis.\n(iii) Waiver of Royalty and Profit Equivalence: You expressly, irrevocably renounce any claim, right, equity, title, or interest in any revenue, consideration, intellectual property, dividend, or financial consideration realized by Ūrdhv Ascens through the sale, licensing, syndication, or commercial exploitation of your ingested data.\n(iv) Statutory Alignment under Indian Law: Such processing is conducted under the lawful premise of your explicit opt-in submission for service access (Section 4(1), DPDPA 2023), for legitimate uses including employment screening and educational fulfillment (Section 7, DPDPA 2023), and pursuant to voluntary consent executed under Section 10 of the Indian Contract Act, 1872."
+        },
+        {
+          "heading": "4. Universal Artificial Intelligence Model Ingestion and Machine Learning Fine-Tuning License",
+          "content": "By accessing the Platform or submitting any data or communication to Ūrdhv Ascens, you hereby grant to the Company a worldwide, perpetual, irrevocable, fully paid-up, royalty-free, transferable, and sublicensable license to ingest, tokenize, embed, compress, process, and deploy all user-submitted information, reading patterns, interaction logs, query inputs, and demographic records into current and future artificial intelligence architectures.\n\nThis includes, without limitation, the training, reinforcement learning from human feedback (RLHF), fine-tuning, context-window pre-training, parameter optimization, and commercial deployment of Large Language Models (LLMs), visual generation engines, multimodal reasoning agents, behavioral forecasting networks, and automated marketing generation pipelines. You agree that once ingested into neural network weights, embeddings, or mathematical vector spaces, such data becomes permanently synthesized into the proprietary intellectual property of Ūrdhv Ascens, and cannot be excised, forgotten, unlearned, or segregated upon request."
+        },
+        {
+          "heading": "5. Cross-Border Extraterritorial Exfiltration and Global Cloud Distribution",
+          "content": "You explicitly authorize and consent to the transmission, routing, storage, mirroring, and processing of your personal data across servers, edge computing nodes, and distributed databases located in multiple sovereign jurisdictions outside the Republic of India, including but not limited to the United States of America, the European Union, Singapore, and jurisdictions where our content delivery and cloud partners (such as Cloudflare, Inc. and Hostinger International Ltd.) maintain infrastructure.\n\nPursuant to Section 16 of the Digital Personal Data Protection Act, 2023, you acknowledge that the Central Government of India may notify restrictions on data transfers to certain foreign countries; however, you expressly agree that unless a jurisdiction is categorically blacklisted by an official gazette notification, Ūrdhv Ascens possesses full contractual authority to transfer and process your data worldwide without obtaining supplementary individual approvals."
+        },
+        {
+          "heading": "6. Indefinite Retention Horizons and Technical Impracticability of Complete Erasure",
+          "content": "Notwithstanding any statutory terminology regarding data erasure or account deletion, you acknowledge and agree that Ūrdhv Ascens retains all ingested personal and telemetry data for an indefinite duration, spanning the entire corporate lifespan of the Company and its successors.\n\nData shall be retained for purposes of forensic fraud prevention, rate-limit defense, machine learning continuity, commercial recordkeeping, defense of anticipated litigation, and algorithmic integrity. While a Data Principal may submit a written request to suppress direct promotional messaging, you acknowledge that completely deleting, purging, or excising data from compiled database snapshots, cold-storage tape archives, distributed cryptographic ledgers, and deep machine-learning checkpoints is technically unfeasible and commercially impracticable, and the Company is formally exempt from performing complete erasure where retention is necessary for the establishment, exercise, or defense of legal claims under Section 17 of the DPDPA 2023."
+        },
+        {
+          "heading": "7. Compulsory Promotional Vectors, WhatsApp Commercial Push, and Direct Marketing",
+          "content": "By providing your cellular phone number and email address, you grant Ūrdhv Ascens and its authorized marketing syndicates express permission to contact you via WhatsApp messages, Automated Voice Calls (IVR), Short Message Service (SMS), Rich Communication Services (RCS), and electronic mail for commercial, educational, promotional, and marketing announcements.\n\nYou explicitly declare that this authorization supersedes and overrides any registration on the National Customer Preference Register (NCPR) or National Do Not Call (NDNC) Registry maintained under the Telecom Regulatory Authority of India (TRAI) Telecom Commercial Communications Customer Preference Regulations, 2018. You agree to hold Ūrdhv Ascens completely harmless from any perceived violation of telecom marketing restrictions."
+        },
+        {
+          "heading": "8. Exhaustive Multi-Stage Dispute Resolution, Burdensome Grievance Mechanics, and Cost Allocation",
+          "content": "In compliance with Rule 5(9) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the Digital Personal Data Protection Act, 2023, Ūrdhv Ascens designates its Grievance Officer:\nDesignation: Chief Privacy & Data Governance Desk\nCorporate Email: urdhvascens@gmail.com\nPhysical Jurisdiction: Jaipur, Rajasthan, Republic of India.\n\nPrior to lodging any complaint with the Data Protection Board of India or any regulatory tribunal, you MUST exhaust the mandatory internal resolution protocol:\n(a) You must transmit a physical, notarized notice of grievance via registered post acknowledgment due to our Jaipur operational address, detailing the exact nature of the dispute, providing government-issued identification proof, and depositing a refundable administrative review deposit of INR 10,000 to cover preliminary forensic investigation costs.\n(b) The Company shall have an unfettered window of one hundred and twenty (120) business days to investigate and resolve the grievance in its sole discretion.\n(c) Any attempt to initiate external administrative or judicial proceedings prior to the formal exhaustion of this 120-day window constitutes a material breach of contract, subjecting the Data Principal to liquidated damages of INR 5,00,000 payable immediately to Ūrdhv Ascens."
+        }
+      ]
+    },
+    "termsAndConditions": {
+      "title": "Master Terms of Service & Enterprise Governance Protocols",
+      "effectiveDate": "September 2026",
+      "lastUpdated": "September 2026 (Enforceable Electronic Contract)",
+      "subtitle": "Irrevocable covenants, intellectual property DRM governance, liability caps, and mandatory individual arbitration in Jaipur, Rajasthan.",
+      "sections": [
+        {
+          "heading": "1. Operative Scope, Enforceability Architecture, and Binding Execution",
+          "content": "These Master Terms of Service, Enterprise Governance Covenants, and Acceptable Use Protocols (the \"Terms\") constitute an electronic record within the contemplation of Section 2(t) of the Information Technology Act, 2000, and the statutory rules framed thereunder, being generated by a computer system and requiring neither physical nor digital cryptographic signatures to establish binding, enforceable legal efficacy under Section 10A of the Information Technology Act, 2000, and Section 10 of the Indian Contract Act, 1872.\n\nBy entering, scanning, viewing, browsing, consuming, or accessing any digital surface, sub-domain, booklet asset, or software code hosted at urdhvascens.pages.dev, urdhv-viewer.pages.dev, gold-cat-133405.hostingersite.com, or urdhvascens.online, you represent, warrant, and covenant that you possess full legal capacity to enter into this contract under the laws of the Republic of India. If you are accessing this Platform on behalf of an institution, educational body, or corporate entity, you represent that you possess express authority to bind said entity perpetually to these Terms."
+        },
+        {
+          "heading": "2. Perpetual Unilateral Modification Power and Constructive Notice Doctrine",
+          "content": "Ūrdhv Ascens reserves the exclusive, unchallengeable, and unilateral prerogative to alter, amend, revise, augment, redact, or replace any portion of these Terms, the Privacy Policy, or access parameters at any instant, in its sole and unbridled discretion, without transmitting individualized notifications, emails, or communications to you.\n\nThe revised Terms become operative, binding, and immediately enforceable upon the exact moment of publication on the Platform. Your continuous, subsequent, or repetitive access to the Platform following such modifications constitutes your conclusive, constructive, and irrevocable acceptance of the modified Terms. It remains your sole, non-delegable burden and obligation to inspect these Terms prior to initiating each browsing session."
+        },
+        {
+          "heading": "3. Uncompromising DRM Framework, Technical Protection Measures, and Criminal Sanctions",
+          "content": "All curriculum booklets, visual slide canvases, typographic compositions, vector emblems, brand iconography, and software code available through the Ūrdhv Ascens Viewer are strictly protected by active Digital Rights Management (DRM), cryptographic canvas watermarking, canvas rasterization obfuscation, and Technical Protection Measures (TPM) recognized under Section 65A and Section 65B of the Copyright Act, 1957 (as amended).\n\nYOU EXPRESSLY COVENANT AND AGREE THAT YOU SHALL NOT:\n(a) Open browser Developer Tools, inspect elements, capture DOM trees, record canvas buffers, or execute console scripts designed to scrape or reconstruct booklet folios;\n(b) Execute automated screenshot captures, screen-recording software, optical character recognition (OCR) engines, or headless browser automation (Puppeteer, Playwright, Selenium, cURL);\n(c) Bypass, disassemble, decrypt, reverse engineer, or circumvent our edge authentication gates or canvas DRM protections.\n\nANY BREACH OF THIS SECTION CONSTITUTES WILLFUL COPYRIGHT INFRINGEMENT UNDER SECTION 51 OF THE COPYRIGHT ACT, 1957, AS WELL AS A COGNIZABLE CRIMINAL OFFENSE UNDER SECTION 43, SECTION 66, AND SECTION 66B OF THE INFORMATION TECHNOLOGY ACT, 2000, PUNISHABLE BY IMPRISONMENT OF UP TO THREE (3) YEARS AND SEVERE MONETARY PENALTIES. ŪRDHV ASCENS SHALL VIGOROUSLY PURSUE CRIMINAL PROSECUTION AND LIQUIDATED CIVIL DAMAGES AGAINST ALL INFRACTORS."
+        },
+        {
+          "heading": "4. Complete Exclusion of Warranties and Absolute 'As-Is' Operational Doctrine",
+          "content": "TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE INDIAN LAWS, ALL SERVICES, PLATFORMS, BOOKLETS, LEARNING MODULES, GRAPHICAL INTERFACES, CODE BASES, AND ADVISORY COMMUNICATIONS ARE DELIVERED STRICTLY ON AN \"AS-IS\", \"AS-AVAILABLE\", AND \"WITH ALL FAULTS\" BASIS.\n\nŪRDHV ASCENS EXPRESSLY DISCLAIMS ALL REPRESENTATIONS, WARRANTIES, CONDITIONS, AND COVENANTS OF ANY NATURE WHATSOEVER, WHETHER EXPRESS, IMPLIED, STATUTORY, OR COLLATERAL, INCLUDING BUT NOT LIMITED TO:\n(I) ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR VOCATIONAL OR ACADEMIC OBJECTIVE, TITLE, AND NON-INFRINGEMENT;\n(II) ANY GUARANTEE THAT THE PLATFORM WILL REMAIN CONTINUOUS, ERROR-FREE, UNINTERRUPTED, IMMUNE TO LATENCY SPILLS, VIRUSES, OR NETWORK OUTAGES;\n(III) ANY WARRANTY AS TO THE ACCURACY, PEDAGOGICAL VALIDITY, PROFESSIONAL CERTIFICATION WORTH, OR COMMERCIAL UTILITY OF THE EDUCATIONAL BOOKLETS.\n\nYOU ASSUME TOTAL AND SOLE RESPONSIBILITY AND RISK FOR YOUR CONSUMPTION OF THE CONTENT, AND ACKNOWLEDGE THAT NO VERBAL OR WRITTEN STATEMENT ISSUED BY ŪRDHV ASCENS OR ITS PERSONNEL CREATES ANY WARRANTY WHATSOEVER."
+        },
+        {
+          "heading": "5. Radical Limitation of Liability, Damages Exclusions, and Nominal Cap",
+          "content": "UNDER NO CIRCUMSTANCES, AND UNDER NO LEGAL THEORY—WHETHER IN CONTRACT, TORT (INCLUDING GROSS NEGLIGENCE), STRICT LIABILITY, STATUTORY RESTITUTION, OR OTHERWISE—SHALL ŪRDHV ASCENS, ITS FOUNDERS, DIRECTORS, INVESTORS, EMPLOYEES, CONTRACTORS, EDGE CDN PROVIDERS, OR RESELLERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, RETRIBUTIVE, OR EXEMPLARY DAMAGES WHATSOEVER.\n\nTHIS EXCLUSION EXTENDS TO, WITHOUT LIMITATION, LOSS OF PROFITS, LOSS OF REVENUE, BUSINESS INTERRUPTION, LOSS OF REPUTATION, LOSS OF ACADEMIC ADMISSION OPPORTUNITY, LOSS OF EMPLOYMENT, DATA CORRUPTION, OR SYSTEM COLLAPSE, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH INJURIES.\n\nNOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED IN THESE TERMS OR ANY APPLICABLE STATUTE, THE TOTAL AGGREGATE LIABILITY OF ŪRDHV ASCENS FOR ANY AND ALL CLAIMS ARISING OUT OF OR RELATING TO YOUR USE OF THE PLATFORM OR BOOKLETS SHALL BE STRICTLY LIMITED TO AND SHALL NOT EXCEED THE TOTAL SUM OF INR 100/- (INDIAN RUPEES ONE HUNDRED ONLY) OR THE ACTUAL MONETARY AMOUNT PAID BY YOU TO ŪRDHV ASCENS IN THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE OCCURRENCE GIVING RISE TO LIABILITY, WHICHEVER IS LESSER."
+        },
+        {
+          "heading": "6. Unilateral Indemnification, Hold Harmless Mandate, and Legal Defense Covenant",
+          "content": "You agree to defend, indemnify, and hold completely harmless Ūrdhv Ascens, its founders, executive officers, corporate partners, cloud infrastructure providers, and legal counsel from and against any and all claims, demands, liabilities, damages, awards, settlements, judgments, losses, expenses, and reasonable attorneys' fees arising out of, resulting from, or in connection with:\n(a) Your use, misuse, or inability to access the Platform or educational viewer;\n(b) Your breach or alleged violation of any covenant, representation, or obligation set forth in these Terms or the Privacy Policy;\n(c) Your violation of any third-party right, including without limitation any copyright, trademark, trade secret, or privacy right;\n(d) Any falsified, fraudulent, or inaccurate information submitted through our reader registration portal.\n\nŪrdhv Ascens reserves the exclusive right, at its option, to assume the sole and exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to fully cooperate and reimburse all legal retainers and defense disbursements incurred by the Company on a monthly advance basis."
+        },
+        {
+          "heading": "7. Compulsory Individual Binding Arbitration, Class Action Waiver, and Rajasthan Jurisdiction",
+          "content": "PLEASE READ THIS CLAUSE WITH UTMOST CARE AS IT ELIMINATES YOUR CONSTITUTIONAL PRIVILEGE TO PURSUE CLAIMS IN CIVIL COURTS, OBTAIN A JURY OR BENCH TRIAL, OR PARTICIPATE IN CLASS-ACTION LITIGATION.\n\n(a) Mandatory Sole Arbitration: Any dispute, controversy, claim, or divergence of interpretation arising out of, relating to, or concerning these Terms, the Privacy Policy, or your access to the Platform shall be finally, exclusively, and definitively resolved through binding individual arbitration conducted under the provisions of the Arbitration and Conciliation Act, 1996 (Republic of India), as amended.\n(b) Unilateral Arbitrator Appointment: The arbitral tribunal shall consist of a sole arbitrator appointed exclusively and unilaterally by Ūrdhv Ascens. You waive any objection to the appointment of said arbitrator.\n(c) Seat and Venue: The legal seat, place, and venue of arbitration shall be exclusively Jaipur, Rajasthan, India. The arbitral proceedings shall be conducted strictly in the English language.\n(d) Cost Allocation: The arbitrator's fees and administrative expenses shall be paid upfront by the claimant initiating the dispute. The prevailing party shall be entitled to recover full actual legal costs, attorneys' fees, and forensic expenses.\n(e) Total Class Action and Collective Suit Waiver: YOU UNEQUIVOCALLY WAIVE ANY RIGHT TO COMMENCE, JOIN, OR PARTICIPATE IN ANY CLASS ACTION, REPRESENTATIVE SUIT, PUBLIC INTEREST LITIGATION (PIL), OR CONSOLIDATED ARBITRATION AGAINST ŪRDHV ASCENS. ALL CLAIMS MUST BE BROUGHT STRICTLY ON AN INDIVIDUAL BASIS."
+        },
+        {
+          "heading": "8. Unilateral Suspension, Right of Permanent Termination, and Survival Doctrines",
+          "content": "Ūrdhv Ascens retains the unrestricted, absolute power to block, terminate, suspend, ban, or black-list your IP address, browser fingerprint, or reader account immediately, at any moment, for any reason or no reason whatsoever, without prior notification, cause, or financial recompense.\n\nUpon termination, all conditional licenses granted to you shall instantly vanish. However, all provisions of these Terms which by their nature ought to survive termination—including Section 3 (DRM & Criminal Liability), Section 4 (Disclaimers), Section 5 (Limitation of Liability), Section 6 (Indemnification), Section 7 (Arbitration & Class Action Waiver), and all intellectual property ownership covenants—shall survive indefinitely and remain perpetually enforceable against you."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Master Terms of Service & Enterprise Governance Protocols",
+      "effectiveDate": "September 2026",
+      "lastUpdated": "September 2026 (Enforceable Electronic Contract)",
+      "subtitle": "Irrevocable covenants, intellectual property DRM governance, liability caps, and mandatory individual arbitration in Jaipur, Rajasthan.",
+      "sections": [
+        {
+          "heading": "1. Operative Scope, Enforceability Architecture, and Binding Execution",
+          "content": "These Master Terms of Service, Enterprise Governance Covenants, and Acceptable Use Protocols (the \"Terms\") constitute an electronic record within the contemplation of Section 2(t) of the Information Technology Act, 2000, and the statutory rules framed thereunder, being generated by a computer system and requiring neither physical nor digital cryptographic signatures to establish binding, enforceable legal efficacy under Section 10A of the Information Technology Act, 2000, and Section 10 of the Indian Contract Act, 1872.\n\nBy entering, scanning, viewing, browsing, consuming, or accessing any digital surface, sub-domain, booklet asset, or software code hosted at urdhvascens.pages.dev, urdhv-viewer.pages.dev, gold-cat-133405.hostingersite.com, or urdhvascens.online, you represent, warrant, and covenant that you possess full legal capacity to enter into this contract under the laws of the Republic of India. If you are accessing this Platform on behalf of an institution, educational body, or corporate entity, you represent that you possess express authority to bind said entity perpetually to these Terms."
+        },
+        {
+          "heading": "2. Perpetual Unilateral Modification Power and Constructive Notice Doctrine",
+          "content": "Ūrdhv Ascens reserves the exclusive, unchallengeable, and unilateral prerogative to alter, amend, revise, augment, redact, or replace any portion of these Terms, the Privacy Policy, or access parameters at any instant, in its sole and unbridled discretion, without transmitting individualized notifications, emails, or communications to you.\n\nThe revised Terms become operative, binding, and immediately enforceable upon the exact moment of publication on the Platform. Your continuous, subsequent, or repetitive access to the Platform following such modifications constitutes your conclusive, constructive, and irrevocable acceptance of the modified Terms. It remains your sole, non-delegable burden and obligation to inspect these Terms prior to initiating each browsing session."
+        },
+        {
+          "heading": "3. Uncompromising DRM Framework, Technical Protection Measures, and Criminal Sanctions",
+          "content": "All curriculum booklets, visual slide canvases, typographic compositions, vector emblems, brand iconography, and software code available through the Ūrdhv Ascens Viewer are strictly protected by active Digital Rights Management (DRM), cryptographic canvas watermarking, canvas rasterization obfuscation, and Technical Protection Measures (TPM) recognized under Section 65A and Section 65B of the Copyright Act, 1957 (as amended).\n\nYOU EXPRESSLY COVENANT AND AGREE THAT YOU SHALL NOT:\n(a) Open browser Developer Tools, inspect elements, capture DOM trees, record canvas buffers, or execute console scripts designed to scrape or reconstruct booklet folios;\n(b) Execute automated screenshot captures, screen-recording software, optical character recognition (OCR) engines, or headless browser automation (Puppeteer, Playwright, Selenium, cURL);\n(c) Bypass, disassemble, decrypt, reverse engineer, or circumvent our edge authentication gates or canvas DRM protections.\n\nANY BREACH OF THIS SECTION CONSTITUTES WILLFUL COPYRIGHT INFRINGEMENT UNDER SECTION 51 OF THE COPYRIGHT ACT, 1957, AS WELL AS A COGNIZABLE CRIMINAL OFFENSE UNDER SECTION 43, SECTION 66, AND SECTION 66B OF THE INFORMATION TECHNOLOGY ACT, 2000, PUNISHABLE BY IMPRISONMENT OF UP TO THREE (3) YEARS AND SEVERE MONETARY PENALTIES. ŪRDHV ASCENS SHALL VIGOROUSLY PURSUE CRIMINAL PROSECUTION AND LIQUIDATED CIVIL DAMAGES AGAINST ALL INFRACTORS."
+        },
+        {
+          "heading": "4. Complete Exclusion of Warranties and Absolute 'As-Is' Operational Doctrine",
+          "content": "TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE INDIAN LAWS, ALL SERVICES, PLATFORMS, BOOKLETS, LEARNING MODULES, GRAPHICAL INTERFACES, CODE BASES, AND ADVISORY COMMUNICATIONS ARE DELIVERED STRICTLY ON AN \"AS-IS\", \"AS-AVAILABLE\", AND \"WITH ALL FAULTS\" BASIS.\n\nŪRDHV ASCENS EXPRESSLY DISCLAIMS ALL REPRESENTATIONS, WARRANTIES, CONDITIONS, AND COVENANTS OF ANY NATURE WHATSOEVER, WHETHER EXPRESS, IMPLIED, STATUTORY, OR COLLATERAL, INCLUDING BUT NOT LIMITED TO:\n(I) ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR VOCATIONAL OR ACADEMIC OBJECTIVE, TITLE, AND NON-INFRINGEMENT;\n(II) ANY GUARANTEE THAT THE PLATFORM WILL REMAIN CONTINUOUS, ERROR-FREE, UNINTERRUPTED, IMMUNE TO LATENCY SPILLS, VIRUSES, OR NETWORK OUTAGES;\n(III) ANY WARRANTY AS TO THE ACCURACY, PEDAGOGICAL VALIDITY, PROFESSIONAL CERTIFICATION WORTH, OR COMMERCIAL UTILITY OF THE EDUCATIONAL BOOKLETS.\n\nYOU ASSUME TOTAL AND SOLE RESPONSIBILITY AND RISK FOR YOUR CONSUMPTION OF THE CONTENT, AND ACKNOWLEDGE THAT NO VERBAL OR WRITTEN STATEMENT ISSUED BY ŪRDHV ASCENS OR ITS PERSONNEL CREATES ANY WARRANTY WHATSOEVER."
+        },
+        {
+          "heading": "5. Radical Limitation of Liability, Damages Exclusions, and Nominal Cap",
+          "content": "UNDER NO CIRCUMSTANCES, AND UNDER NO LEGAL THEORY—WHETHER IN CONTRACT, TORT (INCLUDING GROSS NEGLIGENCE), STRICT LIABILITY, STATUTORY RESTITUTION, OR OTHERWISE—SHALL ŪRDHV ASCENS, ITS FOUNDERS, DIRECTORS, INVESTORS, EMPLOYEES, CONTRACTORS, EDGE CDN PROVIDERS, OR RESELLERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, RETRIBUTIVE, OR EXEMPLARY DAMAGES WHATSOEVER.\n\nTHIS EXCLUSION EXTENDS TO, WITHOUT LIMITATION, LOSS OF PROFITS, LOSS OF REVENUE, BUSINESS INTERRUPTION, LOSS OF REPUTATION, LOSS OF ACADEMIC ADMISSION OPPORTUNITY, LOSS OF EMPLOYMENT, DATA CORRUPTION, OR SYSTEM COLLAPSE, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH INJURIES.\n\nNOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED IN THESE TERMS OR ANY APPLICABLE STATUTE, THE TOTAL AGGREGATE LIABILITY OF ŪRDHV ASCENS FOR ANY AND ALL CLAIMS ARISING OUT OF OR RELATING TO YOUR USE OF THE PLATFORM OR BOOKLETS SHALL BE STRICTLY LIMITED TO AND SHALL NOT EXCEED THE TOTAL SUM OF INR 100/- (INDIAN RUPEES ONE HUNDRED ONLY) OR THE ACTUAL MONETARY AMOUNT PAID BY YOU TO ŪRDHV ASCENS IN THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE OCCURRENCE GIVING RISE TO LIABILITY, WHICHEVER IS LESSER."
+        },
+        {
+          "heading": "6. Unilateral Indemnification, Hold Harmless Mandate, and Legal Defense Covenant",
+          "content": "You agree to defend, indemnify, and hold completely harmless Ūrdhv Ascens, its founders, executive officers, corporate partners, cloud infrastructure providers, and legal counsel from and against any and all claims, demands, liabilities, damages, awards, settlements, judgments, losses, expenses, and reasonable attorneys' fees arising out of, resulting from, or in connection with:\n(a) Your use, misuse, or inability to access the Platform or educational viewer;\n(b) Your breach or alleged violation of any covenant, representation, or obligation set forth in these Terms or the Privacy Policy;\n(c) Your violation of any third-party right, including without limitation any copyright, trademark, trade secret, or privacy right;\n(d) Any falsified, fraudulent, or inaccurate information submitted through our reader registration portal.\n\nŪrdhv Ascens reserves the exclusive right, at its option, to assume the sole and exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to fully cooperate and reimburse all legal retainers and defense disbursements incurred by the Company on a monthly advance basis."
+        },
+        {
+          "heading": "7. Compulsory Individual Binding Arbitration, Class Action Waiver, and Rajasthan Jurisdiction",
+          "content": "PLEASE READ THIS CLAUSE WITH UTMOST CARE AS IT ELIMINATES YOUR CONSTITUTIONAL PRIVILEGE TO PURSUE CLAIMS IN CIVIL COURTS, OBTAIN A JURY OR BENCH TRIAL, OR PARTICIPATE IN CLASS-ACTION LITIGATION.\n\n(a) Mandatory Sole Arbitration: Any dispute, controversy, claim, or divergence of interpretation arising out of, relating to, or concerning these Terms, the Privacy Policy, or your access to the Platform shall be finally, exclusively, and definitively resolved through binding individual arbitration conducted under the provisions of the Arbitration and Conciliation Act, 1996 (Republic of India), as amended.\n(b) Unilateral Arbitrator Appointment: The arbitral tribunal shall consist of a sole arbitrator appointed exclusively and unilaterally by Ūrdhv Ascens. You waive any objection to the appointment of said arbitrator.\n(c) Seat and Venue: The legal seat, place, and venue of arbitration shall be exclusively Jaipur, Rajasthan, India. The arbitral proceedings shall be conducted strictly in the English language.\n(d) Cost Allocation: The arbitrator's fees and administrative expenses shall be paid upfront by the claimant initiating the dispute. The prevailing party shall be entitled to recover full actual legal costs, attorneys' fees, and forensic expenses.\n(e) Total Class Action and Collective Suit Waiver: YOU UNEQUIVOCALLY WAIVE ANY RIGHT TO COMMENCE, JOIN, OR PARTICIPATE IN ANY CLASS ACTION, REPRESENTATIVE SUIT, PUBLIC INTEREST LITIGATION (PIL), OR CONSOLIDATED ARBITRATION AGAINST ŪRDHV ASCENS. ALL CLAIMS MUST BE BROUGHT STRICTLY ON AN INDIVIDUAL BASIS."
+        },
+        {
+          "heading": "8. Unilateral Suspension, Right of Permanent Termination, and Survival Doctrines",
+          "content": "Ūrdhv Ascens retains the unrestricted, absolute power to block, terminate, suspend, ban, or black-list your IP address, browser fingerprint, or reader account immediately, at any moment, for any reason or no reason whatsoever, without prior notification, cause, or financial recompense.\n\nUpon termination, all conditional licenses granted to you shall instantly vanish. However, all provisions of these Terms which by their nature ought to survive termination—including Section 3 (DRM & Criminal Liability), Section 4 (Disclaimers), Section 5 (Limitation of Liability), Section 6 (Indemnification), Section 7 (Arbitration & Class Action Waiver), and all intellectual property ownership covenants—shall survive indefinitely and remain perpetually enforceable against you."
+        }
+      ]
+    },
+    "refundPolicy": {
+      "title": "Universal Cancellation, Retainer Allocation & Absolute Refund Policy",
+      "effectiveDate": "September 2026",
+      "lastUpdated": "September 2026 (Governed by Indian Contract Act 1872)",
+      "subtitle": "Strict covenants regarding the irrevocable non-refundability of digital assets, client mobilization retainers, and severe liquidated chargeback penalties.",
+      "sections": [
+        {
+          "heading": "1. Categorical Non-Refundability of Digital and Educational Access Modules",
+          "content": "Ūrdhv Ascens delivers digital visual curriculum booklets, specialized technological coursework, interactive reading engines, and digital design demonstrations.\n\nYou explicitly recognize and agree that all educational curriculum modules, visual booklets, downloadable guides, interactive viewer chapters, and digital learning assets hosted on Ūrdhv Ascens Viewer are provided on an irrevocable, immediate-consumption basis. Because digital learning materials constitute intangible, non-returnable digital goods that are fully exposed and consumed immediately upon display, ALL ACCESS GRANTED, SUBSCRIPTION ENROLLMENTS, ACTIVATION FEES, AND MONETARY REMITTANCES ARE STRICTLY, ABSOLUTELY, AND IRREVOCABLY NON-REFUNDABLE UNDER ALL CIRCUMSTANCES."
+        },
+        {
+          "heading": "2. Bespoke Corporate Studio Engagements, Retainers, and Milestone Capital Commitments",
+          "content": "For all enterprise design, high-performance web architecture, bespoke identity engineering, digital management, and commercial software development contracts:\n\n(a) Non-Refundable Mobilization Retainers: All initial booking fees, project onboarding retainers, and upfront strategy deposits paid to Ūrdhv Ascens represent immediate capital commitments reserved for computational cloud provisioning, creative talent scheduling, architectural engineering allocation, and intellectual property synthesis. Such mobilization deposits are strictly 100% non-refundable from the millisecond of financial clearance.\n(b) Irrevocable Milestone Disbursements: Payments remitted pursuant to project sprint milestones, deliverables, design sprints, or progress schedules become permanent, fully earned, and completely non-refundable immediately upon milestone sign-off, delivery of preliminary artifacts, or expiration of the client review window (defined as forty-eight (48) hours from transmission).\n(c) Absence of Pro-Rata Allocations: In no event shall Ūrdhv Ascens calculate, provide, or honor any pro-rata, partial, or discretionary refunds for early project discontinuation or client restructuring."
+        },
+        {
+          "heading": "3. Forfeiture of Remittances Upon Client Breach, Inactivity, or Convenience Termination",
+          "content": "In the event that a client, corporate sponsor, or subscriber terminates a bespoke engagement for convenience, fails to respond to milestone approvals for seven (7) consecutive calendar days, or materially breaches the executed Statement of Work (SOW):\n(i) All funds previously transmitted to Ūrdhv Ascens shall be permanently, unconditionally forfeited by the client and immediately retained by the Company as pre-agreed liquidated damages to offset lost opportunity costs, engineering standby, and operational disruption;\n(ii) The Company is discharged from any obligation to deliver unfinished code repositories, raw design assets, or staging server access;\n(iii) All outstanding contract balance sums remaining on the executed project schedule shall immediately become due and payable within five (5) business days."
+        },
+        {
+          "heading": "4. Strict Prohibition of Unilateral Chargebacks, Reversals, and Compulsory Penalty Fees",
+          "content": "You agree that you shall NOT initiate, file, request, or solicit any payment chargeback, merchant transaction dispute, automated reversal, or fraud claim through your credit card issuer, banking institution, or payment gateway processor (including UPI, Razorpay, Stripe, or PayPal) without first obtaining express, written, notarized authorization from the executive directorship of Ūrdhv Ascens.\n\nANY UNILATERAL CHARGEBACK, BANKING REVERSAL, OR UNAUTHORIZED TRANSACTION DISPUTE INITIATED BY YOU SHALL CONSTITUTE A MATERIAL BREACH OF CONTRACT AND DELIBERATE CIVIL FRAUD, SUBJECTING YOU TO:\n(a) A mandatory administrative dispute defense penalty fee of 200% of the disputed transaction value, payable immediately to Ūrdhv Ascens;\n(b) Full reimbursement of all banking dispute surcharges, collection agency retainers, forensic documentation costs, and statutory legal defense fees incurred by the Company;\n(c) Immediate reporting of the fraudulent chargeback to credit rating agencies (CIBIL, Experian) and enterprise merchant fraud registries across the Republic of India and global banking networks."
+        },
+        {
+          "heading": "5. Statutory Severability and Enforcement Under the Indian Contract Act, 1872",
+          "content": "This Cancellation & Refund Policy is drafted and executed in strict alignment with Section 73 and Section 74 of the Indian Contract Act, 1872, governing pre-estimated liquidated damages and genuine pre-estimates of operational loss.\n\nIf any provision, paragraph, or clause of this Policy is adjudicated to be invalid, void, or unenforceable by an arbitral tribunal or court of competent jurisdiction in Jaipur, Rajasthan, such adjudication shall not impair or invalidate the remaining provisions of this Instrument, which shall remain in full force and effect to the maximum degree permissible under the laws of the Republic of India."
+        }
+      ]
+    }
+  }
+}

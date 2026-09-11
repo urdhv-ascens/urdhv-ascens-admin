@@ -1,0 +1,8 @@
+# ==============================================================================
+# Cloudflare Pages Redirects
+# Ensure https://urdhvascens.pages.dev/admin does NOT open any admin page and redirects to public site
+# Only https://gold-cat-133405.hostingersite.com/admin/login/ is for admin access
+# ==============================================================================
+
+/admin/*  /  302
+/admin    /  302
