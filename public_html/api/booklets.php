@@ -16,17 +16,9 @@ if ($method === 'GET') {
         send_json([], 200);
     }
 
-    // HTTP caching — 304 Not Modified for unchanged catalog
-    $mtime = filemtime(BOOKLETS_FILE);
-    $etag = '"booklets-' . $mtime . '-' . filesize(BOOKLETS_FILE) . '"';
-    $client_etag = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE_MATCH']) : '';
-    if ($client_etag === $etag) {
-        http_response_code(304);
-        header('ETag: ' . $etag);
-        header('Cache-Control: public, max-age=120, stale-while-revalidate=600');
-        set_cors_headers();
-        exit;
-    }
+    header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
 
     $raw = @file_get_contents(BOOKLETS_FILE);
     $booklets = @json_decode($raw, true) ?: [];
@@ -80,6 +72,8 @@ if ($method === 'POST') {
     }
 
     unset($body['adminKey']);
+    unset($body['token']);
+    unset($body['key']);
 
     // Check if full array passed or single booklet update
     $existing = [];

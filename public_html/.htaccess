@@ -8,10 +8,18 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
-# Pass Authorization header to PHP in FastCGI / PHP-FPM / LiteSpeed
+# Pass Authorization and Admin headers to PHP in FastCGI / PHP-FPM / LiteSpeed
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+SetEnvIf X-Admin-Key "(.*)" HTTP_X_ADMIN_KEY=$1
+RewriteCond %{HTTP:X-Admin-Key} .
+RewriteRule .* - [E=HTTP_X_ADMIN_KEY:%{HTTP:X-Admin-Key}]
+
+SetEnvIf X-Admin-Token "(.*)" HTTP_X_ADMIN_TOKEN=$1
+RewriteCond %{HTTP:X-Admin-Token} .
+RewriteRule .* - [E=HTTP_X_ADMIN_TOKEN:%{HTTP:X-Admin-Token}]
 
 # ------------------------------------------------------------------------------
 # 1. Security Headers
@@ -23,7 +31,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
     Header set X-XSS-Protection "1; mode=block"
     Header unset X-Powered-By
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: https://*.hostingersite.com https://*.pages.dev; media-src 'self' data: blob: https:; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self' https://*.googleapis.com https://*.hostingersite.com https://*.pages.dev;"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: https://*.hostingersite.com https://*.pages.dev https://*.urdhvascens.online; media-src 'self' data: blob: https:; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self' https://*.googleapis.com https://*.hostingersite.com https://*.pages.dev https://*.urdhvascens.online https://*.urdhvascens.com https://api.cloudflare.com https:;"
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -91,7 +99,14 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # JSON API data — short cache for visitors, instant refresh for admins
     <FilesMatch "\.json$">
-        Header set Cache-Control "public, max-age=60, stale-while-revalidate=300"
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # Dynamic PHP API — strictly zero-cache
+    <FilesMatch "\.php$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
     </FilesMatch>
 </IfModule>
 

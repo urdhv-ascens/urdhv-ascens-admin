@@ -12,38 +12,14 @@ handle_cors();
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === 'GET') {
-    // Return live content with HTTP caching
+    // Return live content with strict zero-cache policy so updates reflect instantaneously
     if (file_exists(DATA_FILE)) {
-        $mtime = filemtime(DATA_FILE);
-        $etag = '"content-' . $mtime . '-' . filesize(DATA_FILE) . '"';
-        $last_modified = gmdate('D, d M Y H:i:s', $mtime) . ' GMT';
-
-        // Check If-None-Match (ETag)
-        $client_etag = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE_MATCH']) : '';
-        if ($client_etag === $etag) {
-            http_response_code(304);
-            header('ETag: ' . $etag);
-            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
-            set_cors_headers();
-            exit;
-        }
-
-        // Check If-Modified-Since
-        $client_mod = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) : 0;
-        if ($client_mod && $client_mod >= $mtime) {
-            http_response_code(304);
-            header('ETag: ' . $etag);
-            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
-            set_cors_headers();
-            exit;
-        }
-
         $content = @file_get_contents(DATA_FILE);
         $json = @json_decode($content, true);
         if ($json) {
-            header('ETag: ' . $etag);
-            header('Last-Modified: ' . $last_modified);
-            header('Cache-Control: public, max-age=60, stale-while-revalidate=300');
+            header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+            header('Pragma: no-cache');
+            header('Expires: 0');
             send_json($json);
         }
     }
@@ -57,7 +33,7 @@ if ($method === 'GET') {
 
 if ($method === 'POST') {
     $raw = file_get_contents('php://input');
-    $body = json_decode($raw, true);
+    $body = json_decode($raw, true) ?: $_POST;
 
     if (!$body || !is_array($body)) {
         send_json(['success' => false, 'message' => 'Invalid JSON payload received.'], 400);
@@ -77,8 +53,10 @@ if ($method === 'POST') {
         $existing = json_decode(file_get_contents(DATA_FILE), true) ?: [];
     }
 
-    // Clean payload of security fields before saving
+    // Clean payload of security and auth tokens before saving
     unset($body['adminKey']);
+    unset($body['token']);
+    unset($body['key']);
 
     // Merge updates
     $merged = array_replace_recursive($existing, $body);

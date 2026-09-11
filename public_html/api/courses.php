@@ -26,6 +26,9 @@ if ($method === 'GET') {
         }));
     }
 
+    header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
     send_json($courses);
 }
 
@@ -42,6 +45,8 @@ if ($method === 'POST') {
     }
 
     unset($body['adminKey']);
+    unset($body['token']);
+    unset($body['key']);
 
     // Allow payload to be an array of courses or an object containing courses list
     $coursesToSave = isset($body['courses']) && is_array($body['courses']) ? $body['courses'] : (is_array($body) && isset($body[0]) ? $body : null);

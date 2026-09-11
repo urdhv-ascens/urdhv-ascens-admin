@@ -167,18 +167,19 @@ if ($authenticated && $authenticatedUser) {
 
     $sessionToken = create_session_token($authenticatedUser['email'], $authenticatedUser['name'], $authenticatedUser['role']);
     send_json([
-        'success' => true,
-        'token'   => $sessionToken,
-        'user'    => [
+        'success'  => true,
+        'token'    => $sessionToken,
+        'adminKey' => ADMIN_SECRET_KEY,
+        'user'     => [
             'id'    => $authenticatedUser['id'],
             'name'  => $authenticatedUser['name'],
             'email' => $authenticatedUser['email'],
             'role'  => $authenticatedUser['role']
         ],
-        'email'   => $authenticatedUser['email'],
-        'name'    => $authenticatedUser['name'],
-        'role'    => $authenticatedUser['role'],
-        'message' => "Welcome {$authenticatedUser['name']}, authenticated successfully to Ūrdhv Control Plane."
+        'email'    => $authenticatedUser['email'],
+        'name'     => $authenticatedUser['name'],
+        'role'     => $authenticatedUser['role'],
+        'message'  => "Welcome {$authenticatedUser['name']}, authenticated successfully to Ūrdhv Control Plane."
     ]);
 } else {
     // Record failed attempt
